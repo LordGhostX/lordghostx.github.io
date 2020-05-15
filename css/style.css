@@ -7,25 +7,25 @@ h4 {
   color: #444
 }
 
-.main-timeline7 {
+.main-timeline {
   overflow: hidden;
   position: relative
 }
 
-.main-timeline7 .timeline {
+.main-timeline .timeline {
   width: 50%;
   float: left;
   z-index: 1;
   position: relative
 }
 
-.main-timeline7 .timeline:after, .main-timeline7 .timeline:before {
+.main-timeline .timeline:after, .main-timeline .timeline:before {
   content: "";
   display: block;
   clear: both
 }
 
-.main-timeline7 .timeline:before {
+.main-timeline .timeline:before {
   content: "";
   width: 40px;
   height: 90%;
@@ -35,11 +35,11 @@ h4 {
   right: -20px
 }
 
-.main-timeline7 .timeline:last-child:before {
+.main-timeline .timeline:last-child:before {
   height: 0
 }
 
-.main-timeline7 .timeline-icon {
+.main-timeline .timeline-icon {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -52,7 +52,7 @@ h4 {
   z-index: 3
 }
 
-.main-timeline7 .timeline-icon:before {
+.main-timeline .timeline-icon:before {
   content: "";
   width: 60px;
   height: 60px;
@@ -68,7 +68,7 @@ h4 {
   right: 0
 }
 
-.main-timeline7 .timeline-icon i {
+.main-timeline .timeline-icon i {
   font-size: 35px;
   color: #303a3b;
   line-height: 80px;
@@ -76,7 +76,7 @@ h4 {
   position: relative
 }
 
-.main-timeline7 .year {
+.main-timeline .year {
   display: block;
   padding: 0 60px 0 30px;
   font-size: 30px;
@@ -87,7 +87,7 @@ h4 {
   position: relative
 }
 
-.main-timeline7 .year:before {
+.main-timeline .year:before {
   content: "";
   display: block;
   width: 30px;
@@ -102,7 +102,7 @@ h4 {
   left: 4px
 }
 
-.main-timeline7 .year:after {
+.main-timeline .year:after {
   content: "";
   border-left: 10px solid #303a3b;
   border-top: 10px solid transparent;
@@ -112,14 +112,14 @@ h4 {
   left: 50px
 }
 
-.main-timeline7 .timeline-content {
+.main-timeline .timeline-content {
   padding: 18px 60px 18px 40px;
   text-align: right;
   position: relative;
   z-index: 1
 }
 
-.main-timeline7 .timeline-content:after, .main-timeline7 .timeline-content:before {
+.main-timeline .timeline-content:after, .main-timeline .timeline-content:before {
   content: "";
   width: 80px;
   height: 150px;
@@ -131,180 +131,180 @@ h4 {
   z-index: -1
 }
 
-.main-timeline7 .timeline-content:after {
+.main-timeline .timeline-content:after {
   left: auto;
   right: -95px
 }
 
-.main-timeline7 .timeline:last-child .timeline-content:after, .main-timeline7 .timeline:last-child .timeline-content:before {
+.main-timeline .timeline:last-child .timeline-content:after, .main-timeline .timeline:last-child .timeline-content:before {
   width: 0;
   height: 0
 }
 
-.main-timeline7 .title {
+.main-timeline .title {
   font-size: 22px;
   font-weight: 700;
   color: #727cb6;
   margin-top: 0
 }
 
-.main-timeline7 .description {
+.main-timeline .description {
   font-size: 15px;
   color: #7f8386;
   line-height: 25px
 }
 
-.main-timeline7 .timeline:nth-child(2) {
+.main-timeline .timeline:nth-child(2) {
   margin-top: 140px
 }
 
-.main-timeline7 .timeline:nth-child(even) {
+.main-timeline .timeline:nth-child(even) {
   margin-bottom: 80px
 }
 
-.main-timeline7 .timeline:nth-child(odd) {
+.main-timeline .timeline:nth-child(odd) {
   margin: -140px 0 0
 }
 
-.main-timeline7 .timeline:first-child, .main-timeline7 .timeline:last-child:nth-child(even) {
+.main-timeline .timeline:first-child, .main-timeline .timeline:last-child:nth-child(even) {
   margin: 0 !important
 }
 
-.main-timeline7 .timeline:nth-child(2n) .timeline-icon, .main-timeline7 .timeline:nth-child(2n):before {
+.main-timeline .timeline:nth-child(2n) .timeline-icon, .main-timeline .timeline:nth-child(2n):before {
   right: auto;
   left: -20px;
   background: #e77e21
 }
 
-.main-timeline7 .timeline:nth-child(2n) .timeline-icon {
+.main-timeline .timeline:nth-child(2n) .timeline-icon {
   left: -40px
 }
 
-.main-timeline7 .timeline:nth-child(2n) .year {
+.main-timeline .timeline:nth-child(2n) .year {
   padding: 0 30px 0 60px;
   text-align: left
 }
 
-.main-timeline7 .timeline:nth-child(2n) .year:before {
+.main-timeline .timeline:nth-child(2n) .year:before {
   left: auto;
   right: 3px
 }
 
-.main-timeline7 .timeline:nth-child(2n) .year:after {
+.main-timeline .timeline:nth-child(2n) .year:after {
   border-left: none;
   border-right: 10px solid #303a3b;
   right: 50px
 }
 
-.main-timeline7 .timeline:nth-child(2n) .timeline-content {
+.main-timeline .timeline:nth-child(2n) .timeline-content {
   padding: 18px 40px 18px 60px;
   text-align: left
 }
 
-.main-timeline7 .timeline:nth-child(2n) .timeline-content:before {
+.main-timeline .timeline:nth-child(2n) .timeline-content:before {
   left: -95px
 }
 
-.main-timeline7 .timeline:nth-child(2n) .timeline-content:after {
+.main-timeline .timeline:nth-child(2n) .timeline-content:after {
   left: 15px
 }
 
-.main-timeline7 .timeline:nth-child(2n) .timeline-icon:before {
+.main-timeline .timeline:nth-child(2n) .timeline-icon:before {
   border-color: #e77e21;
   box-shadow: 0 0 0 4px #f1a563
 }
 
-.main-timeline7 .timeline:nth-child(2n) .year:before {
+.main-timeline .timeline:nth-child(2n) .year:before {
   background: #e77e21;
   box-shadow: 0 0 0 4px #e77e21
 }
 
-.main-timeline7 .timeline:nth-child(2n) .title {
+.main-timeline .timeline:nth-child(2n) .title {
   color: #e77e21
 }
 
-.main-timeline7 .timeline:nth-child(3n) .timeline-icon, .main-timeline7 .timeline:nth-child(3n):before {
+.main-timeline .timeline:nth-child(3n) .timeline-icon, .main-timeline .timeline:nth-child(3n):before {
   background: #008b8b
 }
 
-.main-timeline7 .timeline:nth-child(3n) .timeline-icon:before {
+.main-timeline .timeline:nth-child(3n) .timeline-icon:before {
   border-color: #008b8b;
   box-shadow: 0 0 0 4px #50b5b4
 }
 
-.main-timeline7 .timeline:nth-child(3n) .year:before {
+.main-timeline .timeline:nth-child(3n) .year:before {
   background: #008b8b;
   box-shadow: 0 0 0 4px #008b8b
 }
 
-.main-timeline7 .timeline:nth-child(3n) .title {
+.main-timeline .timeline:nth-child(3n) .title {
   color: #008b8b
 }
 
-.main-timeline7 .timeline:nth-child(4n) .timeline-icon, .main-timeline7 .timeline:nth-child(4n):before {
+.main-timeline .timeline:nth-child(4n) .timeline-icon, .main-timeline .timeline:nth-child(4n):before {
   background: #ed687c
 }
 
-.main-timeline7 .timeline:nth-child(4n) .timeline-icon:before {
+.main-timeline .timeline:nth-child(4n) .timeline-icon:before {
   border-color: #ed687c;
   box-shadow: 0 0 0 4px #f798a8
 }
 
-.main-timeline7 .timeline:nth-child(4n) .year:before {
+.main-timeline .timeline:nth-child(4n) .year:before {
   background: #ed687c;
   box-shadow: 0 0 0 4px #ed687c
 }
 
-.main-timeline7 .timeline:nth-child(4n) .title {
+.main-timeline .timeline:nth-child(4n) .title {
   color: #ed687c
 }
 
 @media only screen and (max-width:990px) {
-  .main-timeline7 .timeline {
+  .main-timeline .timeline {
     width: 100%
   }
 
-  .main-timeline7 .timeline:nth-child(even), .main-timeline7 .timeline:nth-child(odd) {
+  .main-timeline .timeline:nth-child(even), .main-timeline .timeline:nth-child(odd) {
     margin: 0
   }
 
-  .main-timeline7 .timeline:before, .main-timeline7 .timeline:nth-child(2n):before {
+  .main-timeline .timeline:before, .main-timeline .timeline:nth-child(2n):before {
     width: 30px;
     height: 100%;
     left: 25px
   }
 
-  .main-timeline7 .timeline-icon, .main-timeline7 .timeline:nth-child(2n) .timeline-icon {
+  .main-timeline .timeline-icon, .main-timeline .timeline:nth-child(2n) .timeline-icon {
     left: 0
   }
 
-  .main-timeline7 .timeline:nth-child(2n) .year, .main-timeline7 .year {
+  .main-timeline .timeline:nth-child(2n) .year, .main-timeline .year {
     text-align: left;
     padding: 0 30px 0 100px
   }
 
-  .main-timeline7 .timeline:nth-child(2n) .year:before, .main-timeline7 .year:before {
+  .main-timeline .timeline:nth-child(2n) .year:before, .main-timeline .year:before {
     left: auto;
     right: 4px
   }
 
-  .main-timeline7 .year:after {
+  .main-timeline .year:after {
     left: auto;
     right: 50px;
     border-right: 10px solid #303a3b;
     border-left: none
   }
 
-  .main-timeline7 .timeline-content .description {
+  .main-timeline .timeline-content .description {
     color: #666
   }
 
-  .main-timeline7 .timeline-content, .main-timeline7 .timeline:nth-child(2n) .timeline-content {
+  .main-timeline .timeline-content, .main-timeline .timeline:nth-child(2n) .timeline-content {
     text-align: left;
     padding: 18px 40px 18px 100px
   }
 
-  .main-timeline7 .timeline-content:after, .main-timeline7 .timeline-content:before {
+  .main-timeline .timeline-content:after, .main-timeline .timeline-content:before {
     width: 0;
     height: 0
   }
