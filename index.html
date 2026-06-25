@@ -1,1009 +1,133 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Portfolio for Solomon Esenyi: software engineering, technical writing, developer advocacy, blockchain systems, and high-performance data pipelines."
+        />
+        <title>Solomon Esenyi | Portfolio</title>
+        <link
+            rel="icon"
+            href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314566a'/%3E%3Cpath d='M9 21h14v3H9zM10 8h12l-2 10h-8z' fill='white'/%3E%3C/svg%3E"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"
+        />
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+    <body data-page="home">
+        <div id="site-nav"></div>
 
-<head>
-  <title>LordGhostX Timeline</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-</head>
+        <main>
+            <section class="hero-section">
+                <div class="container">
+                    <div class="row align-items-center g-5">
+                        <div class="col-lg-8">
+                            <p class="eyebrow mb-3">
+                                Engineer · Writer · Dev Advocate
+                            </p>
+                            <h1 id="hero-name" class="display-4 fw-bold mb-3">
+                                Solomon Esenyi
+                            </h1>
+                            <p id="hero-headline" class="hero-lead mb-4"></p>
+                            <p
+                                id="hero-bio"
+                                class="text-secondary fs-5 mb-4"
+                            ></p>
+                            <div
+                                id="hero-roles"
+                                class="d-flex flex-wrap gap-2 mb-4"
+                            ></div>
+                            <div
+                                id="hero-actions"
+                                class="d-flex flex-wrap gap-3"
+                            ></div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="profile-panel">
+                                <p class="panel-label mb-2">Current Focus</p>
+                                <ul
+                                    id="focus-list"
+                                    class="list-unstyled mb-4"
+                                ></ul>
+                                <p class="panel-label mb-2">Find Me</p>
+                                <div
+                                    id="hero-socials"
+                                    class="d-flex flex-wrap gap-2"
+                                ></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-<body>
-  <div class="container">
-    <div class="text-center">
-      <h4>LordGhostX Timeline</h4>
-      <p>Welcome to my Timeline, nothing fancy here. It's more like a diary where I dump stuff because I don't want to forget it.</p>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="main-timeline">
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2002</span>
-            <div class="timeline-content">
-              <h5 class="title">March 23</h5>
-              <p class="description">
-                He who would be referred to as <strong>The Lord of Ghosts</strong> | <strong>Everyone's neighborhood ghost</strong> was born
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2015</span>
-            <div class="timeline-content">
-              <h5 class="title">March</h5>
-              <p class="description">
-                Wrote my first program with Windows Batch Scripting
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2016</span>
-            <div class="timeline-content">
-              <h5 class="title">April</h5>
-              <p class="description">
-                Compiled <strong>Hello World</strong> in C++ using Visual Studio 2010
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2016</span>
-            <div class="timeline-content">
-              <h5 class="title">July</h5>
-              <p class="description">
-                Compiled <strong>Hello World</strong> in C# using Visual Studio 2013
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2016</span>
-            <div class="timeline-content">
-              <h5 class="title">August</h5>
-              <p class="description">
-                Started Web Development with HTML & CSS thanks to TheNewBoston
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2016</span>
-            <div class="timeline-content">
-              <h5 class="title">November</h5>
-              <p class="description">
-                Launched my first PC game with C# & Unity3D game engine
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2017</span>
-            <div class="timeline-content">
-              <h5 class="title">February</h5>
-              <p class="description">
-                The "Blender Artists" community was born & I made my first 3D model with Blender3D
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2017</span>
-            <div class="timeline-content">
-              <h5 class="title">April</h5>
-              <p class="description">
-                Started venturing into Cyber Security & Penetration Testing
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2017</span>
-            <div class="timeline-content">
-              <h5 class="title">June</h5>
-              <p class="description">
-                Installed & used the Linux Operating System for the first time (Kali)
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2017</span>
-            <div class="timeline-content">
-              <h5 class="title">July - November</h5>
-              <p class="description">
-                Language Learning Rush (Jumping from one programming language to another), grabbed Python, PHP, JavaScript, Ruby, SQL, Brainfuck, C, JQuery, Java, Swift, and others I can't recall
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2017</span>
-            <div class="timeline-content">
-              <h5 class="title">August</h5>
-              <p class="description">
-                Created my first blog, which was named Greyhatcommunity, and a telegram channel that grew over 10K members
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2017</span>
-            <div class="timeline-content">
-              <h5 class="title">August</h5>
-              <p class="description">
-                Created my first programming language (GhostScript), which I built upon Ruby with the simplicity of Python aimed at programming beginners
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2017</span>
-            <div class="timeline-content">
-              <h5 class="title">September</h5>
-              <p class="description">
-                Became a founding father of the SoloLearn Nigeria community (SLN)
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2017</span>
-            <div class="timeline-content">
-              <h5 class="title">December</h5>
-              <p class="description">
-                Discovered & reported my first security vulnerability to Google. It was a flaw that allowed the bypassing of 2-factor authentication of Google products on android
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2018</span>
-            <div class="timeline-content">
-              <h5 class="title">January</h5>
-              <p class="description">
-                Went into the world of Cryptocurrency & Blockchain
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2018</span>
-            <div class="timeline-content">
-              <h5 class="title">February</h5>
-              <p class="description">
-                Built PUMMP3r 1.0 with Python, which was a Cryptocurrency P&D bot
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2018</span>
-            <div class="timeline-content">
-              <h5 class="title">April</h5>
-              <p class="description">
-                Released the first version of <a href="https://github.com/LordGhostX/HashDB">HashDB (formally JnDB)</a>, which is a lightweight NoSQL database management system built with Python
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2018</span>
-            <div class="timeline-content">
-              <h5 class="title">April</h5>
-              <p class="description">
-                First time I made money with programming. Sold PUMMP3r 2.0 for 0.1 BTC ~ $800
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2018</span>
-            <div class="timeline-content">
-              <h5 class="title">May - December</h5>
-              <p class="description">
-                Learning about cryptocurrency trading, forex and built Niggrix ~ an automated cryptocurrency trading robot, trading backtesting algorithms, and EA systems with MQL4
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2018</span>
-            <div class="timeline-content">
-              <h5 class="title">June - July</h5>
-              <p class="description">
-                Built and released a ransomware (GhostCrypt) & graduated from High School at 16
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2018</span>
-            <div class="timeline-content">
-              <h5 class="title">November</h5>
-              <p class="description">
-                Trained my first machine learning model with Azure ML Studio
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2018</span>
-            <div class="timeline-content">
-              <h5 class="title">December</h5>
-              <p class="description">
-                Discovered a security vulnerability in PayStack & Flutterwave, which allowed an attacker to intercept and tamper transactions making the payment processor systems read a successful transaction when nothing occurred
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2019</span>
-            <div class="timeline-content">
-              <h5 class="title">March</h5>
-              <p class="description">
-                Passion for Artificial Intelligence started through learning about Deep Learning & DSN IndabaX Program
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2019</span>
-            <div class="timeline-content">
-              <h5 class="title">May</h5>
-              <p class="description">
-                Got my first programming gig, it was to develop a website for a client, got paid ₦40,000
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2019</span>
-            <div class="timeline-content">
-              <h5 class="title">July</h5>
-              <p class="description">
-                Joined DSN through their Python & Machine Learning Class for pre-uni students
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2019</span>
-            <div class="timeline-content">
-              <h5 class="title">June</h5>
-              <p class="description">
-                Attended my first tech hackathon
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2019</span>
-            <div class="timeline-content">
-              <h5 class="title">September</h5>
-              <p class="description">
-                Gave a presentation at POIC 2019 to over 5000 attendees (Largest audience ever)
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2019</span>
-            <div class="timeline-content">
-              <h5 class="title">September</h5>
-              <p class="description">
-                Became a DSC Unilag Core team member for the 2019/2020 session
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2019</span>
-            <div class="timeline-content">
-              <h5 class="title">October</h5>
-              <p class="description">
-                Built a web app with Django and Tensorflow, which helps medical practitioners diagnose patients faster and quicker.
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2019</span>
-            <div class="timeline-content">
-              <h5 class="title">November</h5>
-              <p class="description">
-                Qualified to attend the 2019 DSN Data Science Bootcamp
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2020</span>
-            <div class="timeline-content">
-              <h5 class="title">February</h5>
-              <p class="description">
-                Was opportuned to attend the launch of the Google Hub in Lagos, Nigeria
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2020</span>
-            <div class="timeline-content">
-              <h5 class="title">February</h5>
-              <p class="description">
-                Attended the first-ever Open Source Festival in Africa
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2020</span>
-            <div class="timeline-content">
-              <h5 class="title">March</h5>
-              <p class="description">
-                Was a participant at the maiden FSI hackathon, GLH hackathon, and CCHub Data hackathon
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2020</span>
-            <div class="timeline-content">
-              <h5 class="title">April</h5>
-              <p class="description">
-                Became the Chief Technical Officer (CTO) of CleanPick Waste Management Startup
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2020</span>
-            <div class="timeline-content">
-              <h5 class="title">April</h5>
-              <p class="description">
-                Wrote my first technical article on my <a href="https://lordghostx.hashnode.dev/">Hashnode</a> blog
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2020</span>
-            <div class="timeline-content">
-              <h5 class="title">May</h5>
-              <p class="description">
-                Launched <a href="https://github.com/LordGhostX/animeX-v2">v2 of animeX</a> with even better features
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2020</span>
-            <div class="timeline-content">
-              <h5 class="title">June</h5>
-              <p class="description">
-                Made my first seven digits in NGN and got myself a Macbook Pro, Samsung A71, and many others
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2020</span>
-            <div class="timeline-content">
-              <h5 class="title">July</h5>
-              <p class="description">
-                Gave a talk at Flaskcon, which is an international conference for the Flask community
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2020</span>
-            <div class="timeline-content">
-              <h5 class="title">August</h5>
-              <p class="description">
-                Created a miniature cryptocurrency remittance hitting $1,000 in volume in the first month
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2020</span>
-            <div class="timeline-content">
-              <h5 class="title">August</h5>
-              <p class="description">
-                Joined the 2020/2021 DSC Unilag Core Team
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2020</span>
-            <div class="timeline-content">
-              <h5 class="title">August</h5>
-              <p class="description">
-                Created a telegram bot for monitoring developer job listings and got 900+ users after its launch <a href="https://t.me/devjobhub">https://t.me/devjobhub</a>
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2020</span>
-            <div class="timeline-content">
-              <h5 class="title">September</h5>
-              <p class="description">
-                Built AnimeHive, which is a telegram bot for downloading anime right from telegram, also provides recommendations and info about an anime <a href="https://t.me/animehive_bot">https://t.me/animehive_bot</a>
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2020</span>
-            <div class="timeline-content">
-              <h5 class="title">September</h5>
-              <p class="description">
-                Become a core team member of the technicalities team at OtakuTV, which is the biggest anime community in Nigeria
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2020</span>
-            <div class="timeline-content">
-              <h5 class="title">October</h5>
-              <p class="description">
-                Helped the team at Telos Blockchain setup their airdrop system, which managed over 35K users (currently the biggest app I maintain)
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2020</span>
-            <div class="timeline-content">
-              <h5 class="title">October</h5>
-              <p class="description">
-                Became an Ambassador at <a href="https://auth0.com">Auth0</a>, which is a company dedicated to web security and authentication (I'm a digital superman 😎🤩)
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2020</span>
-            <div class="timeline-content">
-              <h5 class="title">November</h5>
-              <p class="description">
-                Gave a talk at the first-ever Cybersecurity themed DSC event in Africa
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2020</span>
-            <div class="timeline-content">
-              <h5 class="title">November</h5>
-              <p class="description">
-                Became an Ambassador at <a href="https://pettysave.com">PettySave</a>, which is a fintech helping Nigerians save and Invest money
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2020</span>
-            <div class="timeline-content">
-              <h5 class="title">November</h5>
-              <p class="description">
-                Signed my first paid technical writing contract with a USA based company - <a href="https://dev.to/lordghostx/building-a-telegram-bot-with-python-and-fauna-494i">Fauna</a>
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2020</span>
-            <div class="timeline-content">
-              <h5 class="title">December</h5>
-              <p class="description">
-                Gave a talk on Technical Writing at DSC Federal Polytechnic Bida. You can find slides and Youtube recordings <a href="https://twitter.com/LordGhostX/status/1343865324404355072?s=20">here</a>
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2020</span>
-            <div class="timeline-content">
-              <h5 class="title">December</h5>
-              <p class="description">
-                Released my 2020 <a href="https://twitter.com/LordGhostX/status/1344670863182983171?s=20">year in review</a>
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2021</span>
-            <div class="timeline-content">
-              <h5 class="title">February</h5>
-              <p class="description">
-                Was featured in <a href="https://twitter.com/dev_chronicles/status/1361737972727611397?s=21">Developer Chronicles podcast</a>
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2021</span>
-            <div class="timeline-content">
-              <h5 class="title">February</h5>
-              <p class="description">
-                Was featured in <a href="https://twitter.com/maryamcodes/status/1364528064579973120?s=21">GEN-TECH podcast</a>
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2021</span>
-            <div class="timeline-content">
-              <h5 class="title">February</h5>
-              <p class="description">
-                Was featured on <a href="https://twitter.com/lordghostx/status/1365006940636672002?s=21">Fauna Community Spotlight</a> for open-source contributions made to the company
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2021</span>
-            <div class="timeline-content">
-              <h5 class="title">March</h5>
-              <p class="description">
-                Became the Open Source Africa (OSCA) <a href="https://twitter.com/lordghostx/status/1374803062020317184?s=21">Chapter Lead for Yaba</a>
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2021</span>
-            <div class="timeline-content">
-              <h5 class="title">March</h5>
-              <p class="description">
-                Got my article featured and published on <a href="https://www.git-tower.com/learn/curiouscat-with-python-and-fauna/">Git Tower</a>
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2021</span>
-            <div class="timeline-content">
-              <h5 class="title">April</h5>
-              <p class="description">
-                Was awarded the "Ambassador of the Month" award at Auth0
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2021</span>
-            <div class="timeline-content">
-              <h5 class="title">June</h5>
-              <p class="description">
-                Became a <a href="https://blog.logrocket.com/author/solomonesenyi/">LogRocket</a> author
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2021</span>
-            <div class="timeline-content">
-              <h5 class="title">July</h5>
-              <p class="description">
-                Won the <a href="https://www.unicornmaking.com/solo-funds-hackathon/">SoLo Funds Hackathon</a> hosted by Unicorn
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2021</span>
-            <div class="timeline-content">
-              <h5 class="title">August</h5>
-              <p class="description">
-                Won the <a href="https://www.unicornmaking.com/boardroom-one-hackathon/">BoardRoom One Hackathon</a> hosted by <a href="https://www.linkedin.com/posts/semicolonafrica_mcm-hackathon-activity-6838105955331317760-msLf">Unicorn</a>
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2021</span>
-            <div class="timeline-content">
-              <h5 class="title">September</h5>
-              <p class="description">
-                MongoDB <a href="https://github.com/mongodb/mongo-go-driver/pull/737">merged my PR</a> into their Golang driver repository
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2021</span>
-            <div class="timeline-content">
-              <h5 class="title">September</h5>
-              <p class="description">
-                Became a DSC Unilag Core team member for the 2021/2022 session
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2021</span>
-            <div class="timeline-content">
-              <h5 class="title">October</h5>
-              <p class="description">
-                Received <a href="https://twitter.com/LordGhostX/status/1447616443713998849">swags from MongoDB</a> for my community contributions
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2021</span>
-            <div class="timeline-content">
-              <h5 class="title">November</h5>
-              <p class="description">
-                Got my first ever full-time role at a US-based fintech + blockchain company
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2021</span>
-            <div class="timeline-content">
-              <h5 class="title">November</h5>
-              <p class="description">
-                Gave a talk at <a href="https://gdg.community.dev/events/details/google-gdg-abeokuta-presents-devfest-abeokuta-2021">DevFest Abeokuta</a>, first time travelling by train too
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2021</span>
-            <div class="timeline-content">
-              <h5 class="title">December</h5>
-              <p class="description">
-                Released my 2021 <a href="https://twitter.com/LordGhostX/status/1476351288099147778?s=20">year in review</a>
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2022</span>
-            <div class="timeline-content">
-              <h5 class="title">February</h5>
-              <p class="description">
-                Won the <strong>Best use of payments product</strong> award category at the <a href="https://stitch.money/hackathon/">Stitchathon 2022 Hackathon</a>
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2022</span>
-            <div class="timeline-content">
-              <h5 class="title">March</h5>
-              <p class="description">
-                Became a full-time Technical Writer at <a href="https://unstoppabledomains.com">Unstoppable Domains</a> - a web3 company that's building decentralized digital identities for the world with NFT domains
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2022</span>
-            <div class="timeline-content">
-              <h5 class="title">March</h5>
-              <p class="description">
-                Purchased my first <a href="https://twitter.com/LordGhostX/status/1502054958224523265?s=20&t=Qn8fribItlrG9LYKgVAjOg">NFT domain</a> from Unstoppable Domains
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2022</span>
-            <div class="timeline-content">
-              <h5 class="title">March</h5>
-              <p class="description">
-                Gave a talk at the <a href="https://twitter.com/LordGhostX/status/1506953309336313858?s=20&t=Qn8fribItlrG9LYKgVAjOg">biggest tech conference in Africa</a> - <a href="https://oscafest22.sched.com/event/yVnI">Open Source Festival
-                  2022</a>
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2022</span>
-            <div class="timeline-content">
-              <h5 class="title">April</h5>
-              <p class="description">
-                Minted my <a href="https://etherscan.io/tx/0x439861a4e7770ef39edd4695c01860a0e48c3b9017d5952189b3649edf2b161b">first NFT</a> - <a href="https://twitter.com/LordGhostX/status/1511518541937360899">Los Muertos World</a>
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2022</span>
-            <div class="timeline-content">
-              <h5 class="title">April</h5>
-              <p class="description">
-                Sold my <a href="https://twitter.com/LordGhostX/status/1513208034796916739">first NFT</a> for 0.5 ETH ~ $1,647
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2022</span>
-            <div class="timeline-content">
-              <h5 class="title">May</h5>
-              <p class="description">
-                Sold my <a href="https://twitter.com/LordGhostX/status/1523124421279461377?s=20&t=sUnhr7DvshI1-vLkrGbxLg">first NFT on the Solana blockchain</a>
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2022</span>
-            <div class="timeline-content">
-              <h5 class="title">June</h5>
-              <p class="description">
-                First time flying in a plane, also toured the city of Abuja
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2022</span>
-            <div class="timeline-content">
-              <h5 class="title">July</h5>
-              <p class="description">
-                I got interviewed by the <a href="https://twitter.com/GrowIntoTech/status/1543881419579064322?s=20&t=pnEVaaR926q-LrsK5PH7YQ">Grow Into Tech</a> team
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2022</span>
-            <div class="timeline-content">
-              <h5 class="title">August</h5>
-              <p class="description">
-                <a href="https://twitter.com/LordGhostX/status/1563311254055567360?t=_2bqgnqhv14EWnVlY_zIdA&s=19">Got promoted</a> at Unstoppable Domains 6 months after I joined the company
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2022</span>
-            <div class="timeline-content">
-              <h5 class="title">September</h5>
-              <p class="description">
-                First time going on a road trip, also toured the city of Asaba
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2022</span>
-            <div class="timeline-content">
-              <h5 class="title">October</h5>
-              <p class="description">
-                Spoke at 5 events on <a href="https://bit.ly/open-source-talk">Open Source and Hacktoberfest</a>
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2022</span>
-            <div class="timeline-content">
-              <h5 class="title">October</h5>
-              <p class="description">
-                Created an investment syndicate with an annual capital of $388.8K
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2022</span>
-            <div class="timeline-content">
-              <h5 class="title">November</h5>
-              <p class="description">
-                First time flying out of Nigeria, also toured the city of Nairobi, Kenya
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2022</span>
-            <div class="timeline-content">
-              <h5 class="title">November</h5>
-              <p class="description">
-                Got my first car ~ Hyundai Santa Fe
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2022</span>
-            <div class="timeline-content">
-              <h5 class="title">December</h5>
-              <p class="description">
-                Got another promotion at Unstoppable Domains 9 months after I joined the company
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2022</span>
-            <div class="timeline-content">
-              <h5 class="title">December</h5>
-              <p class="description">
-                Planned and organized <a href="https://twitter.com/garrihangout">Garri Hangout 1.0</a> in less than a week, got over 300 people to attend, and raised ₦642,000 in sponsorships
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2022</span>
-            <div class="timeline-content">
-              <h5 class="title">December</h5>
-              <p class="description">
-                Released my 2022 <a href="https://twitter.com/LordGhostX/status/1609123395081310208?s=20&t=v9fNZmX-_uHGLj_2SRFv6w">year in review</a>
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2023</span>
-            <div class="timeline-content">
-              <h5 class="title">January</h5>
-              <p class="description">
-                My team got laid off from Unstoppable Domains
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2023</span>
-            <div class="timeline-content">
-              <h5 class="title">February</h5>
-              <p class="description">
-                Got another car ~ Ford Edge Limited
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2023</span>
-            <div class="timeline-content">
-              <h5 class="title">March</h5>
-              <p class="description">
-                Made significant progress to my 2018 project (Niggrix) and started building an MVP
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2023</span>
-            <div class="timeline-content">
-              <h5 class="title">March</h5>
-              <p class="description">
-                Joined the <a href="https://www.stackshift.com">Stack Shift dWeb fellowship</a> (Zeta) cohort
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2023</span>
-            <div class="timeline-content">
-              <h5 class="title">April</h5>
-              <p class="description">
-                Became a full-time Technical Writer at <a href="https://waku.org">Status/Waku</a> - a web3 project that's uncompromising web3 communication at scale
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2023</span>
-            <div class="timeline-content">
-              <h5 class="title">May</h5>
-              <p class="description">
-                Launched the MVP of my research project (Trade Maven) on a live portfolio
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2023</span>
-            <div class="timeline-content">
-              <h5 class="title">June</h5>
-              <p class="description">
-                Spoke at the biggest tech event in Ilorin ~ <a href="https://twitter.com/LordGhostX/status/1664988980855668739?s=20">Career Fest</a> to over 2000 attendees
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2023</span>
-            <div class="timeline-content">
-              <h5 class="title">July</h5>
-              <p class="description">
-                Raised over $50,000 in pledges for a <a href="https://twitter.com/LordGhostX/status/1680099420275109888?s=20">project idea</a> I shared with friends in less than 24 hours
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2023</span>
-            <div class="timeline-content">
-              <h5 class="title">August</h5>
-              <p class="description">
-                Took time to visit and tour the city of Port Harcourt, Nigeria and Kigali, Rwanda
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2023</span>
-            <div class="timeline-content">
-              <h5 class="title">September</h5>
-              <p class="description">
-                Concluded my <a href="https://x.com/LordGhostX/status/1708147399644860608?s=20">raising round at $90,000</a> for a project (Trade Maven) I originally targeted to raise $30,000.
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2023</span>
-            <div class="timeline-content">
-              <h5 class="title">October</h5>
-              <p class="description">
-                Got yet another car ~ Ford Edge Limited. Had to write off the previous because of an accident
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2023</span>
-            <div class="timeline-content">
-              <h5 class="title">November</h5>
-              <p class="description">
-                Took time to visit and tour the cities of Enugu and Nsukka, spoke at <a href="https://x.com/LordGhostX/status/1723335006792114385?s=20">Polygon Dev Conference</a> too
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2023</span>
-            <div class="timeline-content">
-              <h5 class="title">December</h5>
-              <p class="description">
-                Designed a modern-day chess with an 11x11 grid and modified game rules named <a href="https://x.com/LordGhostX/status/1735313449654112588?s=20">Operation BattleGrid: Strategic Frontiers</a>
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2023</span>
-            <div class="timeline-content">
-              <h5 class="title">December</h5>
-              <p class="description">
-                Built a peer-to-peer, private, permissionless, and decentralized communication protocol called <a href="https://x.com/LordGhostX/status/1741129443194634748?s=20">GhostNet</a>
-              </p>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-            <span class="year">2023</span>
-            <div class="timeline-content">
-              <h5 class="title">December</h5>
-              <p class="description">
-                Released my 2023 <a href="https://x.com/LordGhostX/status/1741544247763796286?s=20">year in review</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
+            <section class="section-block">
+                <div class="container">
+                    <div class="section-heading-row">
+                        <div class="section-heading">
+                            <p class="eyebrow mb-2">Selected Work</p>
+                            <h2 class="h1 mb-3">Projects</h2>
+                            <p class="text-secondary mb-0">
+                                A few builds spanning trading research,
+                                decentralized protocols, game design, and
+                                open-source utilities.
+                            </p>
+                        </div>
+                        <a
+                            class="btn btn-outline-primary section-link"
+                            href="projects.html"
+                        >
+                            <i
+                                class="fas fa-arrow-right me-2"
+                                aria-hidden="true"
+                            ></i
+                            >All Projects
+                        </a>
+                    </div>
+                    <div id="featured-projects" class="row g-4"></div>
+                </div>
+            </section>
 
+            <section class="section-block section-muted">
+                <div class="container">
+                    <div class="section-heading-row">
+                        <div class="section-heading">
+                            <p class="eyebrow mb-2">Selected Writing</p>
+                            <h2 class="h1 mb-3">Writing</h2>
+                            <p class="text-secondary mb-0">
+                                Essays, tutorials, and developer education from
+                                technical writing and developer relations work.
+                            </p>
+                        </div>
+                        <a
+                            class="btn btn-outline-primary section-link"
+                            href="writing.html"
+                        >
+                            <i
+                                class="fas fa-arrow-right me-2"
+                                aria-hidden="true"
+                            ></i
+                            >All Writing
+                        </a>
+                    </div>
+                    <div id="featured-writing" class="row g-4"></div>
+                </div>
+            </section>
+        </main>
+
+        <div id="site-footer"></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/profile.js"></script>
+        <script src="js/projects.js"></script>
+        <script src="js/writing.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>
