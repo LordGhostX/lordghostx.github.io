@@ -3,7 +3,7 @@
     { key: "home", label: "Home", href: "index.html" },
     { key: "projects", label: "Projects", href: "projects.html" },
     { key: "writing", label: "Writing", href: "writing.html" },
-    // { key: "timeline", label: "Timeline", href: "timeline.html" },
+    { key: "timeline", label: "Timeline", href: "timeline.html" },
   ];
 
   function escapeHtml(value) {

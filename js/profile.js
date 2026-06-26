@@ -48,7 +48,7 @@ const profile = {
     },
     {
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/LordGhostX",
+      href: "https://www.linkedin.com/in/solomon-esenyi",
       icon: "fa-brands fa-linkedin",
     },
     {

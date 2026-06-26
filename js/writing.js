@@ -388,18 +388,6 @@ const writingItems = [
     featured: false,
   },
   {
-    title:
-      "Building a QR Code Identity System with Fernet Symmetric Encryption Algorithm in Python",
-    platform: "DEV Community",
-    date: "December 2020",
-    sortDate: "2020-12-22",
-    summary:
-      "A Python security tutorial showing how to encrypt identity data with Fernet and represent it through QR codes.",
-    tags: ["Python", "Encryption", "Cybersecurity"],
-    url: "https://dev.to/lordghostx/building-a-qr-code-identity-system-with-fernet-symmetric-encryption-algorithm-in-python-2ffd",
-    featured: false,
-  },
-  {
     title: "A Friendly Introduction to Cybersecurity",
     platform: "DEV Community",
     date: "December 2020",
@@ -441,6 +429,18 @@ const writingItems = [
       "A tutorial on building a Telegram todo-list bot with Python while using Fauna as a serverless database backend.",
     tags: ["Python", "Telegram Bot", "Fauna"],
     url: "https://dev.to/lordghostx/building-a-telegram-bot-with-python-and-fauna-494i",
+    featured: false,
+  },
+  {
+    title:
+      "Building a QR Code Identity System with Fernet Symmetric Encryption Algorithm in Python",
+    platform: "DEV Community",
+    date: "April 2020",
+    sortDate: "2020-04-01",
+    summary:
+      "A Python security tutorial showing how to encrypt identity data with Fernet and represent it through QR codes.",
+    tags: ["Python", "Encryption", "Cybersecurity"],
+    url: "https://dev.to/lordghostx/building-a-qr-code-identity-system-with-fernet-symmetric-encryption-algorithm-in-python-2ffd",
     featured: false,
   },
 ];
