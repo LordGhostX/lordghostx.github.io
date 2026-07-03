@@ -475,7 +475,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <p class="text-secondary">${escapeHtml(item.summary)}</p>
         <div class="d-flex flex-wrap gap-2 mt-4">${renderTags(item.tags)}</div>
         <a class="btn btn-outline-primary mt-4" href="${escapeHtml(item.url)}"${linkAttributes(item.url)}>
-          <i class="fas fa-arrow-right me-2" aria-hidden="true"></i>Read
+          <i class="fas fa-arrow-right me-2" aria-hidden="true"></i>Read Article
         </a>
       </article>
     </div>
