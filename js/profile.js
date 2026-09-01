@@ -63,5 +63,5 @@ const profile = {
     },
   ],
   footerText:
-    "Developer infrastructure, technical writing, blockchain systems, and trading research.",
+    "developer infrastructure, technical writing, blockchain systems, and trading research.",
 };

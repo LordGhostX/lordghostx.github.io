@@ -20,7 +20,7 @@ const projects = [
       "A research and execution system for hourly crypto prediction markets, with live market monitoring, trade bookkeeping, performance tracking, and a local analytics dashboard.",
     stack: ["Polymarket", "Trading Data", "Algorithmic Trading"],
     githubUrl: "",
-    demoUrl: "",
+    demoUrl: "https://x.com/LordGhostX/status/2041708781596242051",
     featured: false,
   },
   {

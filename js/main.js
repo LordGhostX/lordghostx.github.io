@@ -6,6 +6,42 @@
     { key: "timeline", label: "Timeline", href: "timeline.html" },
   ];
 
+  function initTheme() {
+    const saved = localStorage.getItem("theme") || "dark";
+    applyTheme(saved);
+  }
+
+  function applyTheme(theme) {
+    const html = document.documentElement;
+    if (theme === "light") {
+      html.setAttribute("data-theme", "light");
+    } else {
+      html.removeAttribute("data-theme");
+    }
+    localStorage.setItem("theme", theme);
+  }
+
+  function setTheme(theme) {
+    applyTheme(theme);
+    updateThemeButton();
+  }
+
+  function toggleTheme() {
+    const current = localStorage.getItem("theme") || "dark";
+    setTheme(current === "dark" ? "light" : "dark");
+  }
+
+  function updateThemeButton() {
+    const btn = document.getElementById("theme-toggle");
+    if (!btn) return;
+    const isDark = (localStorage.getItem("theme") || "dark") === "dark";
+    btn.setAttribute(
+      "aria-label",
+      isDark ? "Switch to light theme" : "Switch to dark theme",
+    );
+    btn.innerHTML = `<i class="fas fa-${isDark ? "moon" : "sun"}" aria-hidden="true"></i>`;
+  }
+
   function escapeHtml(value) {
     return String(value ?? "")
       .replaceAll("&", "&amp;")
@@ -72,6 +108,9 @@
               `,
                 )
                 .join("")}
+              <li class="nav-item">
+                <button id="theme-toggle" class="nav-link btn-theme" type="button"></button>
+              </li>
             </ul>
           </div>
         </div>
@@ -293,5 +332,11 @@
     renderNav();
     renderFooter();
     renderHome();
+    initTheme();
+    updateThemeButton();
+    const themeBtn = document.getElementById("theme-toggle");
+    if (themeBtn) {
+      themeBtn.addEventListener("click", toggleTheme);
+    }
   });
 })();

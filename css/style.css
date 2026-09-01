@@ -1,16 +1,40 @@
 :root {
-    --bg: #090d12;
-    --surface: #111821;
-    --surface-muted: #0d141c;
-    --ink: #eef5ff;
-    --muted: #a7b4c4;
-    --line: #243241;
-    --accent: #48a8d8;
-    --accent-dark: #82cef3;
-    --accent-soft: rgba(72, 168, 216, 0.16);
+    /* Dark theme (default) - terminal black with cyan accent */
+    --bg: #0a0e14;
+    --surface: #151b24;
+    --surface-muted: #0f1419;
+    --ink: #e8eef5;
+    --muted: #8b92a0;
+    --line: #2a3138;
+    --accent: #06b6d4;
+    --accent-soft: rgba(6, 182, 212, 0.12);
     --focus: #f0b84f;
-    --section-pad: 3rem;
-    --section-pad-mobile: 2.25rem;
+    --section-pad: 2.5rem;
+    --section-pad-mobile: 1.75rem;
+}
+
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+        --bg: #f8f9fa;
+        --surface: #ffffff;
+        --surface-muted: #f5f6f8;
+        --ink: #1a1f2e;
+        --muted: #64748b;
+        --line: #e2e8f0;
+        --accent: #0891b2;
+        --accent-soft: rgba(8, 145, 178, 0.12);
+    }
+}
+
+html[data-theme="light"] {
+    --bg: #f8f9fa;
+    --surface: #ffffff;
+    --surface-muted: #f5f6f8;
+    --ink: #1a1f2e;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --accent: #0891b2;
+    --accent-soft: rgba(8, 145, 178, 0.12);
 }
 
 * {
@@ -34,13 +58,13 @@ body {
 }
 
 a {
-    color: var(--accent-dark);
+    color: var(--accent);
     text-decoration-thickness: 0.08em;
     text-underline-offset: 0.18em;
 }
 
 a:hover {
-    color: #ffffff;
+    opacity: 0.8;
 }
 
 .text-secondary {
@@ -49,8 +73,8 @@ a:hover {
 
 .site-nav {
     border-bottom: 1px solid var(--line);
-    background: rgba(9, 13, 18, 0.94);
-    backdrop-filter: blur(12px);
+    background: var(--bg);
+    backdrop-filter: blur(8px);
 }
 
 .navbar-brand {
@@ -59,7 +83,7 @@ a:hover {
 }
 
 .navbar-brand:hover {
-    color: #ffffff;
+    color: var(--accent);
 }
 
 .navbar-toggler {
@@ -73,26 +97,27 @@ a:hover {
 .nav-link {
     color: var(--muted);
     font-weight: 600;
+    font-size: 0.95rem;
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--accent-dark);
+    color: var(--accent);
 }
 
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show {
-    color: var(--accent-dark);
+    color: var(--accent);
 }
 
 .hero-section {
     padding: var(--section-pad) 0;
-    background: linear-gradient(180deg, #0d141c 0%, var(--bg) 100%);
+    background: var(--bg);
 }
 
 .page-header {
     padding: var(--section-pad) 0;
-    background: #0d141c;
+    background: var(--surface-muted);
     border-bottom: 1px solid var(--line);
 }
 
@@ -105,7 +130,7 @@ a:hover {
 
 .eyebrow,
 .panel-label {
-    color: var(--accent-dark);
+    color: var(--accent);
     font-size: 0.78rem;
     font-weight: 800;
     letter-spacing: 0.08em;
@@ -151,8 +176,8 @@ a:hover {
 .timeline-card {
     background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: 8px;
-    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
+    border-radius: 6px;
+    box-shadow: none;
 }
 
 .profile-panel {
@@ -183,9 +208,9 @@ a:hover {
 }
 
 .content-card:hover {
-    border-color: rgba(72, 168, 216, 0.55);
-    box-shadow: 0 20px 46px rgba(0, 0, 0, 0.32);
-    transform: translateY(-2px);
+    border-color: var(--accent);
+    box-shadow: none;
+    transform: translateY(-1px);
 }
 
 .card-meta {
@@ -199,45 +224,65 @@ a:hover {
     align-items: center;
     min-height: 1.75rem;
     padding: 0.25rem 0.65rem;
-    color: var(--accent-dark);
+    color: var(--accent);
     background: var(--accent-soft);
-    border: 1px solid rgba(72, 168, 216, 0.28);
+    border: 1px solid rgba(6, 182, 212, 0.2);
     border-radius: 999px;
     font-size: 0.82rem;
     font-weight: 700;
 }
 
 .btn-outline-primary {
-    --bs-btn-color: var(--accent-dark);
-    --bs-btn-border-color: rgba(130, 206, 243, 0.72);
-    --bs-btn-hover-color: #061018;
-    --bs-btn-hover-bg: var(--accent-dark);
-    --bs-btn-hover-border-color: var(--accent-dark);
-    --bs-btn-active-color: #061018;
-    --bs-btn-active-bg: var(--accent-dark);
-    --bs-btn-active-border-color: var(--accent-dark);
+    --bs-btn-color: var(--accent);
+    --bs-btn-border-color: var(--accent);
+    --bs-btn-hover-color: #ffffff;
+    --bs-btn-hover-bg: var(--accent);
+    --bs-btn-hover-border-color: var(--accent);
+    --bs-btn-active-color: #ffffff;
+    --bs-btn-active-bg: var(--accent);
+    --bs-btn-active-border-color: var(--accent);
     --bs-btn-disabled-color: var(--muted);
     --bs-btn-disabled-border-color: var(--line);
-    --bs-btn-focus-shadow-rgb: 72, 168, 216;
+    --bs-btn-focus-shadow-rgb: 6, 182, 212;
 }
 
 .social-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2.6rem;
-    height: 2.6rem;
-    color: var(--accent-dark);
-    background: #0d141c;
+    width: 2.4rem;
+    height: 2.4rem;
+    color: var(--accent);
+    background: transparent;
     border: 1px solid var(--line);
-    border-radius: 8px;
+    border-radius: 6px;
     text-decoration: none;
+    transition: all 160ms ease;
 }
 
 .social-link:hover {
-    color: #061018;
-    background: var(--accent-dark);
-    border-color: var(--accent-dark);
+    color: #ffffff;
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.btn-theme {
+    padding: 0.5rem 0.75rem !important;
+    color: var(--accent) !important;
+    background: transparent !important;
+    border: none !important;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: opacity 160ms ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+}
+
+.btn-theme:hover {
+    opacity: 0.8;
 }
 
 .timeline-list {
@@ -272,8 +317,8 @@ a:hover {
     justify-content: center;
     width: 2.4rem;
     height: 2.4rem;
-    color: var(--accent-dark);
-    background: #0d141c;
+    color: var(--accent);
+    background: var(--surface);
     border: 2px solid var(--accent);
     border-radius: 50%;
 }
@@ -317,10 +362,11 @@ a:hover {
 }
 
 .site-footer {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     color: var(--muted);
     border-top: 1px solid var(--line);
-    background: #0d141c;
+    background: var(--surface-muted);
+    font-size: 0.9rem;
 }
 
 :focus-visible {
