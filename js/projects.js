@@ -1,5 +1,17 @@
 const projects = [
   {
+    title: "Grantline",
+    type: "AI Finance Protocol",
+    date: "August 2026",
+    sortDate: "2026-08-21",
+    description:
+      "Programmable financial authority for AI agents that separates agent intent from authority enforcement. AI proposes actions, Grantline evaluates them against Mandates, and only authorized actions reach the Vault.",
+    stack: ["Solidity", "AI Agents", "Financial Authority"],
+    githubUrl: "https://github.com/LordGhostX/grantline",
+    demoUrl: "",
+    featured: true,
+  },
+  {
     title: "Perps Playground",
     type: "Market Structure Lab",
     date: "June 2026",
@@ -57,10 +69,7 @@ const projects = [
     stack: ["Quant Finance", "Trading Research", "Market Microstructure"],
     githubUrl: "https://github.com/LordGhostX/quant-scrolls",
     demoUrl: "",
-    featured: true,
-  },
-  {
-    title: "Paradex RS",
+    featured: false,
     type: "Open Source Contribution",
     date: "August 2025",
     sortDate: "2025-08-09",

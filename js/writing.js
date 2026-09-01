@@ -1,5 +1,16 @@
 const writingItems = [
   {
+    title: "Grantline: Programmable Financial Authority for AI Agents",
+    platform: "Official Documentation",
+    date: "August 2026",
+    sortDate: "2026-08-21",
+    summary:
+      "Complete guide to Grantline's architecture and execution model. Covers Mandates, Action Plans, authorization decisions, delegation, Preflight checks, Vault custody, escalation workflows, and security boundaries.",
+    tags: ["Solidity", "AI Agents", "Financial Authority"],
+    url: "https://grantline.xyz/docs",
+    featured: true,
+  },
+  {
     title: "How to Build and Deploy a Solana Program Using Pinocchio",
     platform: "GitHub Gist",
     date: "August 2025",
