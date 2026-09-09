@@ -1,6 +1,7 @@
-const projects = [
+export const projects = [
   {
     title: "Grantline",
+    category: "Protocols & AI",
     type: "AI Finance Protocol",
     date: "August 2026",
     sortDate: "2026-08-21",
@@ -13,6 +14,7 @@ const projects = [
   },
   {
     title: "Perps Playground",
+    category: "Trading & markets",
     type: "Market Structure Lab",
     date: "June 2026",
     sortDate: "2026-06-24",
@@ -25,6 +27,7 @@ const projects = [
   },
   {
     title: "Prediction Market Trader",
+    category: "Trading & markets",
     type: "Trading Automation",
     date: "March 2026",
     sortDate: "2026-03-30",
@@ -37,6 +40,7 @@ const projects = [
   },
   {
     title: "Lighter Python SDK",
+    category: "Trading & markets",
     type: "Open Source Contribution",
     date: "February 2026",
     sortDate: "2026-02-01",
@@ -49,6 +53,7 @@ const projects = [
   },
   {
     title: "Crypto Market Engine",
+    category: "Trading & markets",
     type: "Market Research Engine",
     date: "December 2025",
     sortDate: "2025-12-02",
@@ -61,6 +66,7 @@ const projects = [
   },
   {
     title: "Quant Scrolls",
+    category: "Trading & markets",
     type: "Research Archive",
     date: "August 2025",
     sortDate: "2025-08-26",
@@ -70,6 +76,10 @@ const projects = [
     githubUrl: "https://github.com/LordGhostX/quant-scrolls",
     demoUrl: "",
     featured: false,
+  },
+  {
+    title: "Paradex RS",
+    category: "Trading & markets",
     type: "Open Source Contribution",
     date: "August 2025",
     sortDate: "2025-08-09",
@@ -82,6 +92,7 @@ const projects = [
   },
   {
     title: "Solana Atomic Arbitrage",
+    category: "Trading & markets",
     type: "MEV Infrastructure",
     date: "July 2025",
     sortDate: "2025-07-08",
@@ -94,6 +105,7 @@ const projects = [
   },
   {
     title: "Maven Fund R&D",
+    category: "Trading & markets",
     type: "Crypto Research",
     date: "September 2024",
     sortDate: "2024-09-30",
@@ -106,6 +118,7 @@ const projects = [
   },
   {
     title: "PyBit",
+    category: "Trading & markets",
     type: "Open Source Contribution",
     date: "August 2024",
     sortDate: "2024-08-22",
@@ -118,6 +131,7 @@ const projects = [
   },
   {
     title: "GhostNet",
+    category: "Protocols & AI",
     type: "Protocol",
     date: "January 2024",
     sortDate: "2024-01-04",
@@ -130,6 +144,7 @@ const projects = [
   },
   {
     title: "BattleGrid",
+    category: "Experiments",
     type: "Strategy Game",
     date: "December 14, 2023",
     sortDate: "2023-12-14",
@@ -142,6 +157,7 @@ const projects = [
   },
   {
     title: "Binance DCA",
+    category: "Trading & markets",
     type: "Trading Script",
     date: "October 2022",
     sortDate: "2022-10-10",
@@ -154,6 +170,7 @@ const projects = [
   },
   {
     title: "animeX",
+    category: "Experiments",
     type: "CLI Tool",
     date: "March 2022",
     sortDate: "2022-03-28",
@@ -166,6 +183,7 @@ const projects = [
   },
   {
     title: "ReStatic",
+    category: "Developer tools",
     type: "Developer Tool",
     date: "December 2021",
     sortDate: "2021-12-10",
@@ -178,6 +196,7 @@ const projects = [
   },
   {
     title: "Crypto Arbitrage",
+    category: "Trading & markets",
     type: "Arbitrage Platform",
     date: "November 2021",
     sortDate: "2021-11-26",
@@ -190,6 +209,7 @@ const projects = [
   },
   {
     title: "Docs to Markdown CLI",
+    category: "Developer tools",
     type: "CLI Tool",
     date: "October 2021",
     sortDate: "2021-10-26",
@@ -202,6 +222,7 @@ const projects = [
   },
   {
     title: "Anime Hive",
+    category: "Experiments",
     type: "Telegram Bot",
     date: "October 2020",
     sortDate: "2020-10-19",
@@ -214,6 +235,7 @@ const projects = [
   },
   {
     title: "DevJobHub",
+    category: "Developer tools",
     type: "Job Alert Bot",
     date: "September 2020",
     sortDate: "2020-09-12",
@@ -226,6 +248,7 @@ const projects = [
   },
   {
     title: "Pwned Passwords",
+    category: "Developer tools",
     type: "Security Tool",
     date: "March 2020",
     sortDate: "2020-03-28",
@@ -238,6 +261,7 @@ const projects = [
   },
   {
     title: "QuickMed",
+    category: "Experiments",
     type: "AI Healthcare",
     date: "December 2019",
     sortDate: "2019-12-30",
@@ -250,6 +274,7 @@ const projects = [
   },
   {
     title: "NNDraw",
+    category: "Developer tools",
     type: "Visualization Tool",
     date: "September 2019",
     sortDate: "2019-09-24",
@@ -261,6 +286,7 @@ const projects = [
   },
   {
     title: "Im-Conv",
+    category: "Experiments",
     type: "Web Utility",
     date: "September 2019",
     sortDate: "2019-09-19",
@@ -273,6 +299,7 @@ const projects = [
   },
   {
     title: "PVault",
+    category: "Developer tools",
     type: "Security CLI",
     date: "September 2019",
     sortDate: "2019-09-11",
@@ -285,6 +312,7 @@ const projects = [
   },
   {
     title: "Cert-Gen",
+    category: "Developer tools",
     type: "Automation Tool",
     date: "September 2019",
     sortDate: "2019-09-08",
@@ -297,6 +325,7 @@ const projects = [
   },
   {
     title: "HashDB",
+    category: "Developer tools",
     type: "Database Library",
     date: "August 2019",
     sortDate: "2019-08-15",
@@ -309,6 +338,7 @@ const projects = [
   },
   {
     title: "IPYNB Viewer",
+    category: "Developer tools",
     type: "Developer Tool",
     date: "August 2019",
     sortDate: "2019-08-12",
@@ -320,40 +350,3 @@ const projects = [
     featured: false,
   },
 ];
-
-document.addEventListener("DOMContentLoaded", () => {
-  const target = document.getElementById("projects-list");
-  if (!target) {
-    return;
-  }
-
-  const {
-    escapeHtml,
-    renderEmpty,
-    renderProjectLinks,
-    renderTags,
-    sortRecentFirst,
-  } = window.Portfolio;
-  const sortedProjects = sortRecentFirst(projects);
-
-  if (!sortedProjects.length) {
-    renderEmpty(target, "Projects will appear here.");
-    return;
-  }
-
-  target.innerHTML = sortedProjects
-    .map(
-      (project) => `
-    <div class="col-md-6 col-xl-4">
-      <article class="content-card">
-        <div class="card-meta mb-2">${escapeHtml(project.type)} · ${escapeHtml(project.date)}</div>
-        <h2 class="h4 mb-3">${escapeHtml(project.title)}</h2>
-        <p class="text-secondary">${escapeHtml(project.description)}</p>
-        <div class="d-flex flex-wrap gap-2 mt-4">${renderTags(project.stack)}</div>
-        ${renderProjectLinks(project)}
-      </article>
-    </div>
-  `,
-    )
-    .join("");
-});

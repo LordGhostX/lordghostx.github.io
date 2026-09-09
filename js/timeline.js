@@ -1,4 +1,4 @@
-const timelineItems = [
+export const timelineItems = [
   {
     year: "2002",
     date: "March",
@@ -523,39 +523,3 @@ const timelineItems = [
       'Published my <a href="https://x.com/LordGhostX/status/1741544247763796286?s=20">2023 year in review</a>.',
   },
 ];
-
-document.addEventListener("DOMContentLoaded", () => {
-  const list = document.getElementById("timeline-list");
-  if (!list) {
-    return;
-  }
-
-  const { escapeHtml, sortTimelineRecentFirst } = window.Portfolio;
-  const sortedItems = sortTimelineRecentFirst(timelineItems);
-
-  list.innerHTML = `${sortedItems
-    .map(
-      (item) => `
-    <article class="timeline-item">
-      <div class="timeline-marker" aria-hidden="true">
-        <i class="fa-solid fa-rocket"></i>
-      </div>
-      <div class="timeline-card">
-        <div class="timeline-date">
-          <span class="timeline-year">${escapeHtml(item.year)}</span>
-          <span class="timeline-month">${escapeHtml(item.date)}</span>
-        </div>
-        <p>${item.descriptionHtml}</p>
-      </div>
-    </article>
-  `,
-    )
-    .join("")}
-    <div class="timeline-end" aria-label="Start of timeline">
-      <div class="timeline-marker" aria-hidden="true">
-        <i class="fas fa-map-marker-alt"></i>
-      </div>
-      <span>Start of timeline</span>
-    </div>
-  `;
-});

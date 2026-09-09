@@ -1,4 +1,4 @@
-const profile = {
+export const profile = {
   brandName: "LordGhostX",
   displayName: "Solomon Esenyi",
   headline:

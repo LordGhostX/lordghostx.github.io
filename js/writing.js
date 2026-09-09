@@ -1,14 +1,27 @@
-const writingItems = [
+export const writingItems = [
   {
     title: "Grantline: Programmable Financial Authority for AI Agents",
     platform: "Official Documentation",
     date: "August 2026",
     sortDate: "2026-08-21",
     summary:
-      "Complete guide to Grantline's architecture and execution model. Covers Mandates, Action Plans, authorization decisions, delegation, Preflight checks, Vault custody, escalation workflows, and security boundaries.",
+      "Explains how signed Action Plans pass through Mandate evaluation, Preflight checks, and controller approval before Vault execution. Includes integration guides and references for delegated authority, revocation, signatures, events, and failure codes.",
     tags: ["Solidity", "AI Agents", "Financial Authority"],
+    category: "Protocols & research",
     url: "https://grantline.xyz/docs",
     featured: true,
+  },
+  {
+    title: "Convoy vs. Hookdeck vs. Svix: Picking the Right Webhook Infrastructure",
+    platform: "GitHub Gist",
+    date: "July 2026",
+    sortDate: "2026-07-08",
+    summary:
+      "Compares Convoy's self-hosted gateway, Hookdeck's inbound event operations, and Svix's customer-facing webhook delivery. Examines deployment control, retries, replay, observability, pricing, and the operational trade-offs that determine which tool fits.",
+    tags: ["Webhooks", "Event-Driven Architecture", "Developer Infrastructure"],
+    category: "Engineering",
+    url: "https://gist.github.com/LordGhostX/2ce07c5cbf5f7cf9f1d3b357c9566910",
+    featured: false,
   },
   {
     title: "How to Build and Deploy a Solana Program Using Pinocchio",
@@ -16,8 +29,9 @@ const writingItems = [
     date: "August 2025",
     sortDate: "2025-08-07",
     summary:
-      "A hands-on guide to building, structuring, deploying, and integrating a low-level Solana program using the Pinocchio Rust library.",
+      "Build a Solana counter program with Pinocchio, from account layout and manual instruction routing to validation and state updates. Covers Devnet deployment, zero-copy serialization with bytemuck, and generating a Shank IDL for client tooling.",
     tags: ["Solana", "Rust", "Blockchain Development"],
+    category: "Protocols & research",
     url: "https://gist.github.com/LordGhostX/52ccaaf5752e6829b29646620d1a9ce7",
     featured: false,
   },
@@ -28,8 +42,9 @@ const writingItems = [
     date: "June 2025",
     sortDate: "2025-06-06",
     summary:
-      "A research-focused article exploring how stablecoins and Solana can reduce cross-border payment friction, improve settlement speed, and expand financial access.",
+      "Examines how stablecoins and Solana could improve remittances, merchant payments, and financial access. Connects settlement architecture with institutional adoption, privacy and compliance, while weighing custody risks, network limitations, and barriers to moving between fiat and crypto.",
     tags: ["Solana", "Stablecoins", "Payments"],
+    category: "Protocols & research",
     url: "https://medium.com/@hrknsinst/reducing-global-payment-friction-with-stablecoins-blockchains-and-solana-edfad5e83e04",
     featured: true,
   },
@@ -39,8 +54,9 @@ const writingItems = [
     date: "May 2025",
     sortDate: "2025-05-10",
     summary:
-      "An analysis of Solana’s SIMD-0204 proposal and how slashing could strengthen validator accountability and network security.",
+      "Explains how SIMD-0204 verifies and records validator violations on Solana without yet imposing financial penalties. Covers duplicate-block evidence, on-chain ProofReports, validator transparency, and the technical and governance work needed for future slashing.",
     tags: ["Solana", "Validators", "Protocol Research"],
+    category: "Protocols & research",
     url: "https://lordghostx.hashnode.dev/simd-0204-building-the-foundation-for-slashing-on-solana",
     featured: false,
   },
@@ -50,8 +66,9 @@ const writingItems = [
     date: "May 2025",
     sortDate: "2025-05-07",
     summary:
-      "A research article on Solana’s real-time performance goals, covering latency, throughput, responsiveness, and infrastructure for consumer-grade blockchain apps.",
+      "Explores MagicBlock's Ephemeral Rollups: temporary execution environments that accelerate delegated Solana accounts while keeping programs and assets on the base chain. Compares their composability goals with other scaling approaches and examines gaming, finance, payments, and automation use cases.",
     tags: ["Solana", "Performance", "Web3 Infrastructure"],
+    category: "Protocols & research",
     url: "https://lordghostx.hashnode.dev/solana-at-web2-speed-real-time-performance-without-fragmentation",
     featured: true,
   },
@@ -61,8 +78,9 @@ const writingItems = [
     date: "April 2025",
     sortDate: "2025-04-24",
     summary:
-      "An overview of Starknet Improvement Proposals and how they support protocol governance, ecosystem coordination, and network evolution.",
+      "Explains what Starknet Improvement Proposals contain, how they are classified, and how they move from draft through review to final status. Covers editor responsibilities, proposal guidelines, and ways to contribute feedback and participate in protocol development.",
     tags: ["Starknet", "Governance", "Protocol Research"],
+    category: "Protocols & research",
     url: "https://lordghostx.hashnode.dev/starknet-improvement-proposals-snips",
     featured: false,
   },
@@ -72,8 +90,9 @@ const writingItems = [
     date: "September 2024",
     sortDate: "2024-09-11",
     summary:
-      "An exploration of Starknet’s decentralization roadmap, sequencer architecture, and the potential impact of decentralization on MEV dynamics.",
+      "Examines Starknet's decentralization plans through sequencer roles, Tendermint consensus, ProofChain, STRK staking, and network rewards. Discusses the coordination challenges of distributing control and how changing transaction ordering could reshape MEV opportunities and mitigation.",
     tags: ["Starknet", "MEV", "Blockchain Architecture"],
+    category: "Protocols & research",
     url: "https://dev.to/lordghostx/decentralizing-starknet-architecture-plans-and-mev-impact-7ck",
     featured: true,
   },
@@ -83,8 +102,9 @@ const writingItems = [
     date: "August 2024",
     sortDate: "2024-08-09",
     summary:
-      "A practical guide to transforming Starknet on-chain data into dashboards and visual insights using Dune’s querying and visualization tools.",
+      "Shows how to find Starknet queries on Dune and assemble them into dashboards for network activity, token flows, and protocol metrics. Covers visualization choices, dashboard organization, sharing, and refresh behavior so readers can interpret the data's freshness.",
     tags: ["Starknet", "Dune Analytics", "Onchain Data"],
+    category: "Protocols & research",
     url: "https://dev.to/lordghostx/queries-to-insights-visualizing-starknet-data-with-dune-j8p",
     featured: false,
   },
@@ -94,8 +114,9 @@ const writingItems = [
     date: "July 2024",
     sortDate: "2024-07-31",
     summary:
-      "A survey of Starknet protocols and decentralized applications, highlighting their core features and potential MEV opportunities.",
+      "Surveys Nostra, Ekubo, zkLend, Nimbora, Vesu, and mySwap, connecting their trading and lending features to MEV opportunities. Explains arbitrage and liquidation strategies in the context of Starknet's first-come, first-served transaction ordering at publication.",
     tags: ["Starknet", "DeFi", "MEV"],
+    category: "Protocols & research",
     url: "https://dev.to/lordghostx/starknet-protocols-key-features-and-mev-opportunities-574i",
     featured: false,
   },
@@ -105,8 +126,9 @@ const writingItems = [
     date: "July 2024",
     sortDate: "2024-07-25",
     summary:
-      "An introductory article explaining maximal extractable value, common MEV strategies, and how MEV applies to Starknet’s Layer 2 ecosystem.",
+      "Introduces Ethereum's MEV participants and tooling, then examines how Starknet's sequencing model changes the available strategies. Covers arbitrage, liquidations, cross-layer sandwich attacks, and ecosystem tools for studying and mitigating MEV.",
     tags: ["Starknet", "MEV", "Blockchain"],
+    category: "Protocols & research",
     url: "https://dev.to/lordghostx/introduction-to-mev-on-starknet-1o0l",
     featured: false,
   },
@@ -116,8 +138,9 @@ const writingItems = [
     date: "January 2024",
     sortDate: "2024-01-03",
     summary:
-      "A comparison of Rust GUI libraries and frameworks, including Tauri, Druid, Xilem, Slint, gtk-rs, iced, egui, and Yew.",
+      "Surveys eleven Rust GUI libraries, including Tauri, Slint, iced, egui, Xilem, and Yew. Compares their approaches to building interfaces, platform support, and ecosystem trade-offs to help developers choose tools for desktop and web applications.",
     tags: ["Rust", "GUI Development", "Frontend Tooling"],
+    category: "Engineering",
     url: "https://blog.logrocket.com/state-rust-gui-libraries",
     featured: false,
   },
@@ -127,8 +150,9 @@ const writingItems = [
     date: "June 2023",
     sortDate: "2023-06-02",
     summary:
-      "A practical comparison of Node.js packages and methods for extracting ZIP files, including decompress, adm-zip, zlib, unzipper, and jszip.",
+      "Compares Node.js compression and archive libraries through examples using decompress, adm-zip, zlib, unzipper, and JSZip. Shows how to extract archives, create and modify ZIP contents, and unpack a ZIP buffer into a directory.",
     tags: ["Node.js", "File Handling", "JavaScript"],
+    category: "Engineering",
     url: "https://blog.logrocket.com/best-methods-unzipping-files-node-js/",
     featured: false,
   },
@@ -138,8 +162,9 @@ const writingItems = [
     date: "May 2023",
     sortDate: "2023-05-15",
     summary:
-      "A Rust tutorial introducing Winit for creating windows, handling input, and building cross-platform GUI or game-development foundations.",
+      "Introduces Winit's window creation, event loop, and input handling through a Rust application. Shows how to configure and manage windows, respond to user events, and use Winit as a foundation for cross-platform games and graphical interfaces.",
     tags: ["Rust", "Winit", "GUI Development"],
+    category: "Engineering",
     url: "https://blog.logrocket.com/create-manage-windows-rust-app-with-winit/",
     featured: false,
   },
@@ -149,8 +174,9 @@ const writingItems = [
     date: "April 2023",
     sortDate: "2023-04-19",
     summary:
-      "A tutorial on building a Node.js application with PouchDB, covering database setup and CRUD endpoints.",
+      "Build a book-management API with Express and PouchDB, using LevelDB for server-side storage. Walks through database setup and routes for creating, listing, updating, and deleting book documents, including the document revisions needed for updates.",
     tags: ["Node.js", "PouchDB", "CRUD APIs"],
+    category: "Engineering",
     url: "https://blog.logrocket.com/build-application-with-node-js-pouchdb/",
     featured: false,
   },
@@ -160,8 +186,9 @@ const writingItems = [
     date: "March 2023",
     sortDate: "2023-03-30",
     summary:
-      "A Go tutorial explaining blockchain fundamentals by building blocks, hashes, mining logic, transactions, and chain validation.",
+      "Build a small blockchain in Go to understand blocks, SHA-256 hashes, proof-of-work mining, and the genesis block. Adds transaction records and chain validation to demonstrate how linked hashes make changes to earlier blocks detectable.",
     tags: ["Golang", "Blockchain", "Backend Development"],
+    category: "Protocols & research",
     url: "https://blog.logrocket.com/build-blockchain-with-go",
     featured: false,
   },
@@ -171,8 +198,9 @@ const writingItems = [
     date: "March 2023",
     sortDate: "2023-03-10",
     summary:
-      "A comparison of Go GUI frameworks, including go-gtk, qt, fyne, walk, and gioui, with guidance on choosing between them.",
+      "Compares go-gtk, Qt bindings, Fyne, Walk, and Gio for building graphical applications in Go. Reviews platform coverage, widgets, rendering approaches, and dependencies, with a comparison table to help match a toolkit to a project's requirements.",
     tags: ["Golang", "GUI Development", "Frameworks"],
+    category: "Engineering",
     url: "https://blog.logrocket.com/best-gui-frameworks-go/",
     featured: false,
   },
@@ -182,8 +210,9 @@ const writingItems = [
     date: "January 2023",
     sortDate: "2023-01-26",
     summary:
-      "A migration-focused guide comparing how teams can move codebases and concepts from Node.js, Python, and Rust into Go.",
+      "Walks through planning a migration from Python, Rust, or Node.js to Go, including language differences, dependency choices, and testing. Examines manual rewrites and available translation tools, emphasizing verification of existing behavior throughout the migration.",
     tags: ["Golang", "Migration", "Backend Development"],
+    category: "Engineering",
     url: "https://blog.logrocket.com/go-migration-guide-node-js-python-rust/",
     featured: false,
   },
@@ -193,8 +222,9 @@ const writingItems = [
     date: "January 2023",
     sortDate: "2023-01-18",
     summary:
-      "A guide to Go workspaces for managing multi-module projects, local development, version control, and open source collaboration.",
+      "Shows how go.work and the init, use, edit, and sync commands support local development across multiple Go modules. Demonstrates using one local module from another and discusses collaboration, dependency synchronization, and release workflows.",
     tags: ["Golang", "Workspaces", "Developer Tooling"],
+    category: "Engineering",
     url: "https://blog.logrocket.com/go-workspaces-multi-module-local-development/",
     featured: false,
   },
@@ -204,8 +234,9 @@ const writingItems = [
     date: "October 2022",
     sortDate: "2022-10-27",
     summary:
-      "A comparison of Swift and Rust, covering language features, safety, performance, expressivity, advantages, and tradeoffs.",
+      "Compares Swift and Rust through their safety models, performance goals, expressiveness, tooling, and learning curves. Discusses the strengths and limitations of each ecosystem and how they fit interface development, systems programming, and application backends.",
     tags: ["Rust", "Swift", "Programming Languages"],
+    category: "Engineering",
     url: "https://blog.logrocket.com/swift-vs-rust-comparison-guide/",
     featured: false,
   },
@@ -215,8 +246,9 @@ const writingItems = [
     date: "October 2022",
     sortDate: "2022-10-07",
     summary:
-      "A language comparison covering Rust and Nim features, use cases, interoperability, memory management, and developer experience.",
+      "Compares Rust's ownership model with Nim's memory-management options, syntax, and metaprogramming features. Reviews interoperability with C and C++, example programs, ecosystem limitations, and use cases spanning systems, web development, games, and developer tools.",
     tags: ["Rust", "Nim", "Programming Languages"],
+    category: "Engineering",
     url: "https://blog.logrocket.com/comparing-rust-nim/",
     featured: false,
   },
@@ -226,8 +258,9 @@ const writingItems = [
     date: "September 2022",
     sortDate: "2022-09-23",
     summary:
-      "A tutorial on connecting Go applications to MongoDB and performing CRUD operations using the official MongoDB Go driver.",
+      "Connect a Go application to MongoDB using the official driver, then insert, query, update, replace, and delete documents. Covers connection checks, collection access, BSON values, and mapping database records to Go structs for easier application code.",
     tags: ["Golang", "MongoDB", "Database"],
+    category: "Engineering",
     url: "https://blog.logrocket.com/integrating-mongodb-go-applications",
     featured: false,
   },
@@ -237,8 +270,9 @@ const writingItems = [
     date: "August 2022",
     sortDate: "2022-08-26",
     summary:
-      "An introduction to Carbon, covering its goals as a C++ successor, language features, interoperability, memory safety, and syntax.",
+      "Introduces Carbon as an experimental C++ successor, examining interoperability, generics, and proposed memory-safety improvements. Walks through installation and examples of variables, loops, functions, conditionals, and classes while discussing the language's development goals.",
     tags: ["Carbon", "C++", "Programming Languages"],
+    category: "Engineering",
     url: "https://blog.logrocket.com/exploring-carbon-new-superset-c-plus-plus",
     featured: false,
   },
@@ -248,8 +282,9 @@ const writingItems = [
     date: "June 2022",
     sortDate: "2022-06-29",
     summary:
-      "A frontend tutorial explaining CSS subgrid and container queries for building more adaptive, responsive layouts.",
+      "Explains how subgrid shares a parent grid's tracks and how container queries adapt components to their available space. Combines both features in an article layout, with examples of container types, naming, and responsive styling.",
     tags: ["CSS", "Responsive Design", "Frontend Development"],
+    category: "Engineering",
     url: "https://blog.logrocket.com/using-css-subgrids-container-queries/",
     featured: false,
   },
@@ -259,8 +294,9 @@ const writingItems = [
     date: "June 2022",
     sortDate: "2022-06-10",
     summary:
-      "A comparison of React performance optimization tools and techniques, including the Profiler API, React.memo, and React Developer Tools.",
+      "Shows how the React Profiler API and DevTools reveal rendering costs, then uses React.memo to address unnecessary renders. Explains onRender metrics, flame and ranked graphs, and the trade-offs between measuring performance and applying memoization.",
     tags: ["React", "Performance", "Frontend Development"],
+    category: "Engineering",
     url: "https://blog.logrocket.com/comparing-tools-optimizing-performance-react/",
     featured: false,
   },
@@ -270,8 +306,9 @@ const writingItems = [
     date: "October 2021",
     sortDate: "2021-10-25",
     summary:
-      "A blockchain tutorial showing how to use Go to interact with Solana and build a wallet for storing, receiving, and transferring tokens.",
+      "Build a Solana wallet in Go using solana-go-sdk. Covers RPC connections, creating and importing accounts, checking balances, requesting development funds, and assembling, signing, and submitting SOL transfers.",
     tags: ["Golang", "Solana", "Blockchain"],
+    category: "Protocols & research",
     url: "https://blog.logrocket.com/how-to-create-solana-wallet-go/",
     featured: false,
   },
@@ -281,8 +318,9 @@ const writingItems = [
     date: "October 2021",
     sortDate: "2021-10-04",
     summary:
-      "A guide to documenting Go web APIs with Swag and Swagger to make API documentation easier to create, maintain, and publish.",
+      "Build a todo API with Gin, then generate Swagger documentation from Go annotations using Swag. Covers describing routes, parameters, and responses, generating the documentation files, and serving an interactive Swagger UI alongside the API.",
     tags: ["Golang", "API Documentation", "Swagger"],
+    category: "Engineering",
     url: "https://blog.logrocket.com/documenting-go-web-apis-with-swag/",
     featured: false,
   },
@@ -292,8 +330,9 @@ const writingItems = [
     date: "October 2021",
     sortDate: "2021-10-04",
     summary:
-      "A tutorial on building and deploying a Flask application while using Doppler to manage secrets and environment variables.",
+      "Configure Doppler projects and secrets, inject them into a Flask process with the CLI, and read them as environment variables in Python. Extends the setup to Heroku so the deployed application receives its configuration through Doppler's integration.",
     tags: ["Python", "Flask", "Secrets Management"],
+    category: "Security",
     url: "https://dev.to/lordghostx/build-and-deploy-a-web-app-with-python-flask-and-doppler-9jm",
     featured: false,
   },
@@ -303,8 +342,9 @@ const writingItems = [
     date: "September 2021",
     sortDate: "2021-09-07",
     summary:
-      "A Go-focused guide to core data structures, including arrays, slices, maps, structs, and practical code examples.",
+      "Explains Go arrays, slices, maps, and structs through working examples of initialization, access, updates, and nesting. Covers slice length and capacity, map key checks and deletion, and struct methods with pointer receivers for updating state.",
     tags: ["Golang", "Data Structures", "Programming Fundamentals"],
+    category: "Engineering",
     url: "https://blog.logrocket.com/comprehensive-guide-data-structures-go/",
     featured: false,
   },
@@ -314,8 +354,9 @@ const writingItems = [
     date: "August 2021",
     sortDate: "2021-08-05",
     summary:
-      "A tutorial on building a GraphQL API with Python and Flask to detect and filter profanity in user-generated text.",
+      "Starts with a word-list profanity detector, demonstrates its limitations, and improves filtering with Python's better-profanity library. Exposes detection and censored text through a Flask GraphQL API, with schemas and queries tested in GraphiQL.",
     tags: ["Python", "GraphQL", "API Development"],
+    category: "Engineering",
     url: "https://blog.logrocket.com/build-profanity-filter-api-graphql/",
     featured: false,
   },
@@ -325,8 +366,9 @@ const writingItems = [
     date: "July 2021",
     sortDate: "2021-07-07",
     summary:
-      "A tutorial on implementing authentication and identity management in a Python Flask application using LoginRadius.",
+      "Integrates LoginRadius with Flask using its Python SDK and hosted authentication pages. Covers API credentials, domain allowlisting, registration and login redirects, retrieving user profiles from access tokens, and invalidating tokens on logout.",
     tags: ["Python", "Authentication", "Flask"],
+    category: "Security",
     url: "https://www.loginradius.com/blog/engineering/guest-post/user-authentication-in-python",
     featured: false,
   },
@@ -336,8 +378,9 @@ const writingItems = [
     date: "June 2021",
     sortDate: "2021-06-02",
     summary:
-      "A tutorial on building a Flask contact manager with HarperDB, covering database setup and CRUD functionality.",
+      "Connect a Flask and Bootstrap contact manager to HarperDB through its Python SDK. Sets up a cloud database, schema, and table, then implements contact creation, search, updates, and deletion using HarperDB's query operations.",
     tags: ["Python", "Flask", "HarperDB"],
+    category: "Engineering",
     url: "https://dev.to/lordghostx/building-a-contact-manager-with-python-flask-and-harperdb-1h53",
     featured: false,
   },
@@ -348,8 +391,9 @@ const writingItems = [
     date: "April 2021",
     sortDate: "2021-04-23",
     summary:
-      "A tutorial on adding two-factor authentication to a Flask app using PyOTP and Fauna’s authentication features.",
+      "Builds a Flask registration and login flow with Fauna, then adds time-based one-time passwords using PyOTP. Walks through authenticator enrollment, secret provisioning, code verification, and restricting protected routes until both authentication steps succeed.",
     tags: ["Python", "Two-Factor Authentication", "Fauna"],
+    category: "Security",
     url: "https://dev.to/lordghostx/implementing-two-factor-authentication-with-flask-pyotp-and-fauna-4jf3",
     featured: false,
   },
@@ -360,8 +404,9 @@ const writingItems = [
     date: "April 2021",
     sortDate: "2021-04-16",
     summary:
-      "A security tutorial showing how to add biometric two-factor authentication and risk-based authentication to a Flask cryptocurrency wallet.",
+      "Adds typing-pattern authentication to a Flask cryptocurrency wallet with TypingDNA. Covers recording and enrolling users, verifying login attempts, an email-OTP fallback, and requiring an additional identity check before wallet withdrawals.",
     tags: ["Python", "Biometric Authentication", "Security"],
+    category: "Security",
     url: "https://dev.to/typingdna/how-to-implement-biometric-2fa-in-a-cryptocurrency-wallet-with-flask-and-typingdna-3o41",
     featured: false,
   },
@@ -371,8 +416,9 @@ const writingItems = [
     date: "March 2021",
     sortDate: "2021-03-25",
     summary:
-      "A Flask tutorial covering authentication, authorization, user identity, and session management with Fauna.",
+      "Integrates Fauna's identity and session features into a Flask application. Covers user creation, password authentication, validating session tokens, retrieving the current user's profile, logging out, and changing passwords, alongside the distinction between authentication and authorization.",
     tags: ["Python", "Authentication", "Fauna"],
+    category: "Security",
     url: "https://dev.to/lordghostx/managing-user-authentication-and-sessions-with-fauna-and-flask-5h5h",
     featured: false,
   },
@@ -382,8 +428,9 @@ const writingItems = [
     date: "January 2021",
     sortDate: "2021-01-19",
     summary:
-      "A project-based tutorial for building and deploying a Pastebin-style application with Python, Flask, Fauna, and Heroku.",
+      "Build Faunabin, a Pastebin-style app with Flask, Bootstrap, and Fauna. Creates forms for submitting text, stores pastes under unique identifiers, serves shareable result pages, and deploys the application to Heroku with Gunicorn.",
     tags: ["Python", "Flask", "Fauna"],
+    category: "Engineering",
     url: "https://dev.to/lordghostx/building-faunabin-a-pastebin-clone-with-python-and-fauna-436b",
     featured: false,
   },
@@ -393,8 +440,9 @@ const writingItems = [
     date: "December 2020",
     sortDate: "2020-12-27",
     summary:
-      "A deployment guide showing how to host Flask applications on cPanel-based hosting platforms such as Namecheap.",
+      "Deploy a Flask application through Namecheap's cPanel Python App interface. Covers selecting the runtime and domain, uploading project files, configuring passenger_wsgi.py, installing requirements, and restarting the application to apply changes.",
     tags: ["Python", "Flask", "Deployment"],
+    category: "Engineering",
     url: "https://dev.to/lordghostx/how-to-host-flask-applications-on-namecheap-cpanel-299b",
     featured: false,
   },
@@ -404,8 +452,9 @@ const writingItems = [
     date: "December 2020",
     sortDate: "2020-12-22",
     summary:
-      "A beginner-friendly introduction to cybersecurity concepts, cyber threats, attacks, and basic defensive thinking.",
+      "Introduces common cyberattacks, their impact, and the different roles within security. Explains offensive and defensive teams, the stages of a penetration test, and learning paths and certifications for people exploring the field.",
     tags: ["Cybersecurity", "Security", "Programming Fundamentals"],
+    category: "Security",
     url: "https://dev.to/lordghostx/a-friendly-introduction-to-cybersecurity-1e3a",
     featured: false,
   },
@@ -415,8 +464,9 @@ const writingItems = [
     date: "December 2020",
     sortDate: "2020-12-22",
     summary:
-      "An explanatory guide to the Zen of Python and how its principles shape readable, maintainable Python code.",
+      "Unpacks each of Tim Peters' Zen of Python principles with explanations and code examples. Connects readability, explicit behavior, simple structure, error handling, and namespaces to everyday decisions about writing and organizing Python programs.",
     tags: ["Python", "Programming Fundamentals", "Code Quality"],
+    category: "Engineering",
     url: "https://dev.to/lordghostx/the-zen-of-python-an-in-depth-explanation-45fm",
     featured: false,
   },
@@ -426,8 +476,9 @@ const writingItems = [
     date: "December 2020",
     sortDate: "2020-12-17",
     summary:
-      "A project tutorial for building and deploying a serverless URL shortener with Python, Flask, Fauna, and Heroku.",
+      "Build a Flask URL-shortening API backed by Fauna, generating short identifiers and storing their original destinations. Implements link creation and redirects, then packages the application with Gunicorn and deploys it to Heroku.",
     tags: ["Python", "Serverless", "Fauna"],
+    category: "Engineering",
     url: "https://dev.to/lordghostx/build-and-deploy-a-serverless-url-shortener-with-python-and-fauna-3077",
     featured: false,
   },
@@ -437,8 +488,9 @@ const writingItems = [
     date: "December 2020",
     sortDate: "2020-12-01",
     summary:
-      "A tutorial on building a Telegram todo-list bot with Python while using Fauna as a serverless database backend.",
+      "Create a Telegram todo bot with Python, BotFather, and Fauna. Sets up collections and indexes, connects bot commands to database queries, and lets users add tasks, list them, toggle completion, and delete them.",
     tags: ["Python", "Telegram Bot", "Fauna"],
+    category: "Engineering",
     url: "https://dev.to/lordghostx/building-a-telegram-bot-with-python-and-fauna-494i",
     featured: false,
   },
@@ -449,48 +501,10 @@ const writingItems = [
     date: "April 2020",
     sortDate: "2020-04-01",
     summary:
-      "A Python security tutorial showing how to encrypt identity data with Fernet and represent it through QR codes.",
+      "Build a student ID prototype that generates and reads QR codes in Python. Uses Fernet to encrypt student identifiers before encoding them, then decrypts scanned values to look up records and reject altered identifiers.",
     tags: ["Python", "Encryption", "Cybersecurity"],
+    category: "Security",
     url: "https://dev.to/lordghostx/building-a-qr-code-identity-system-with-fernet-symmetric-encryption-algorithm-in-python-2ffd",
     featured: false,
   },
 ];
-
-document.addEventListener("DOMContentLoaded", () => {
-  const target = document.getElementById("writing-list");
-  if (!target) {
-    return;
-  }
-
-  const {
-    escapeHtml,
-    linkAttributes,
-    renderEmpty,
-    renderTags,
-    sortRecentFirst,
-  } = window.Portfolio;
-  const sortedWriting = sortRecentFirst(writingItems);
-
-  if (!sortedWriting.length) {
-    renderEmpty(target, "Writing will appear here.");
-    return;
-  }
-
-  target.innerHTML = sortedWriting
-    .map(
-      (item) => `
-    <div class="col-md-6 col-xl-4">
-      <article class="content-card">
-        <div class="card-meta mb-2">${escapeHtml(item.platform)} · ${escapeHtml(item.date)}</div>
-        <h2 class="h4 mb-3">${escapeHtml(item.title)}</h2>
-        <p class="text-secondary">${escapeHtml(item.summary)}</p>
-        <div class="d-flex flex-wrap gap-2 mt-4">${renderTags(item.tags)}</div>
-        <a class="btn btn-outline-primary mt-4" href="${escapeHtml(item.url)}"${linkAttributes(item.url)}>
-          <i class="fas fa-arrow-right me-2" aria-hidden="true"></i>Read Article
-        </a>
-      </article>
-    </div>
-  `,
-    )
-    .join("");
-});
