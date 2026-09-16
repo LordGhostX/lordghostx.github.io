@@ -1,5 +1,18 @@
 export const projects = [
   {
+    title: "Amana Check",
+    category: "Protocols & AI",
+    type: "Trust & Verification Platform",
+    date: "September 2026",
+    sortDate: "2026-09-11",
+    description:
+      "A multilingual trust layer for fragile information environments that checks claims against current sources, cites the evidence and date for each fact, and makes uncertainty explicit.",
+    stack: ["TypeScript", "AI", "Trust & Safety"],
+    githubUrl: "",
+    demoUrl: "https://amana-check.vercel.app",
+    featured: true,
+  },
+  {
     title: "Grantline",
     category: "Protocols & AI",
     type: "AI Finance Protocol",
@@ -101,7 +114,7 @@ export const projects = [
     stack: ["Solana", "Yellowstone gRPC", "MEV"],
     githubUrl: "https://github.com/LordGhostX/solana-atomic-arbs",
     demoUrl: "",
-    featured: true,
+    featured: false,
   },
   {
     title: "Maven Fund R&D",

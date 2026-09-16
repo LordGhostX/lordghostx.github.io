@@ -25,6 +25,14 @@ const selected = (items) =>
   recent(items)
     .filter((item) => item.featured)
     .slice(0, 3);
+const selectedProjects = () => {
+  const picks = selected(projects);
+  const grantline = projects.find(
+    (item) => item.githubUrl === "https://github.com/LordGhostX/grantline",
+  );
+  if (!grantline?.featured) return picks;
+  return [grantline, ...picks.filter((item) => item !== grantline)].slice(0, 3);
+};
 const external = (url, text, className = "text-link") =>
   `<a class="${className}" href="${e(url)}"${/^https?:/.test(url) ? ' target="_blank" rel="noopener noreferrer"' : ""}>${text}${arrow}</a>`;
 const tags = (items) =>
@@ -87,10 +95,13 @@ function writingRow(item, index, archive = false) {
 }
 
 function home() {
-  const picks = selected(projects);
+  const picks = selectedProjects();
   const lead = picks[0];
   const hasGrantlineLead =
     lead?.githubUrl === "https://github.com/LordGhostX/grantline";
+  const leadMarkup = hasGrantlineLead
+    ? `    <article class="lead-project"><div class="lead-copy"><div class="lead-meta"><p class="eyebrow">${e(lead.type)}</p><time datetime="${e(lead.sortDate)}">${e(lead.date)}</time></div><h3>${e(lead.title)}</h3><p>${e(lead.description)}</p>${tags(lead.stack)}<div class="lead-links">${projectLinks(lead)}</div></div><div class="authority-note"><span class="mono">The idea, in three steps</span><p>AI proposes.<br><span class="serif">Mandates decide.</span></p><ol class="authority-flow"><li><span>01</span> Agent intent</li><li><span>02</span> Authority check</li><li><span>03</span> Vault execution</li></ol><span class="mono authority-caption">Intent ≠ permission</span></div></article>\n`
+    : "";
   return `<section class="hero container" aria-labelledby="hero-title">
     <div class="hero-intro"><p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Solomon Esenyi <span class="slash">/</span> Engineer, writer, explorer</p><span class="edition mono">The personal portfolio of LordGhostX</span></div>
     <div class="hero-grid">
@@ -101,8 +112,7 @@ function home() {
   </section>
   <section class="work-section section container" id="selected-work" aria-labelledby="work-heading">
     <div class="section-heading"><div><p class="eyebrow">01 / Things I’ve built</p><h2 id="work-heading">Selected <span class="serif">work.</span></h2></div><a class="text-link" href="projects.html">All projects <span class="count">${projects.length}</span> ${arrow}</a></div>
-    ${hasGrantlineLead ? `<article class="lead-project"><div class="lead-copy"><div class="lead-meta"><p class="eyebrow">${e(lead.type)}</p><time datetime="${e(lead.sortDate)}">${e(lead.date)}</time></div><h3>${e(lead.title)}</h3><p>${e(lead.description)}</p>${tags(lead.stack)}<div class="lead-links">${projectLinks(lead)}</div></div><div class="authority-note"><span class="mono">The idea, in three steps</span><p>AI proposes.<br><span class="serif">Mandates decide.</span></p><ol class="authority-flow"><li><span>01</span> Agent intent</li><li><span>02</span> Authority check</li><li><span>03</span> Vault execution</li></ol><span class="mono authority-caption">Intent ≠ permission</span></div></article>` : ""}
-    <div class="selected-projects">${picks
+${leadMarkup}    <div class="selected-projects">${picks
       .slice(hasGrantlineLead ? 1 : 0)
       .map((item, index) =>
         projectRow(item, index + (hasGrantlineLead ? 1 : 0)),
