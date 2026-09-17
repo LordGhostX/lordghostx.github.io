@@ -1,5 +1,17 @@
 export const writingItems = [
   {
+    title: "The Web3 Economic Stack: How Onchain Activity Creates Businesses",
+    platform: "DEV Community",
+    date: "September 2026",
+    sortDate: "2026-09-17",
+    summary:
+      "Explains how onchain economic activity creates businesses beyond the blockchain itself, from trading, lending, payments, and prediction markets to wallets, data, security, and developer tools. Shows how successful primitives create adjacent markets and new ways to capture value.",
+    tags: ["Web3", "Blockchain", "Startups"],
+    category: "Protocols & research",
+    url: "https://dev.to/lordghostx/the-web3-economic-stack-how-onchain-activity-creates-businesses-4mo6",
+    featured: false,
+  },
+  {
     title: "Grantline: Programmable Financial Authority for AI Agents",
     platform: "Official Documentation",
     date: "August 2026",
