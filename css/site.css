@@ -103,6 +103,9 @@ svg {
     outline: 2px solid var(--focus);
     outline-offset: 5px;
 }
+main {
+    overflow-wrap: anywhere;
+}
 main:focus {
     outline: none;
 }
@@ -147,11 +150,18 @@ p {
 time,
 .tags,
 .item-number,
-.count {
+.count,
+.writing-meta {
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     line-height: 1.6;
     letter-spacing: 0.015em;
+}
+time,
+.tags,
+.writing-meta,
+.timeline-entry .mono {
+    font-size: 0.8125rem;
 }
 .eyebrow {
     text-transform: uppercase;
@@ -205,6 +215,7 @@ time,
 }
 .primary-nav {
     display: flex;
+    flex-wrap: wrap;
     gap: 6px;
 }
 .primary-nav a {
@@ -283,7 +294,6 @@ time,
     display: flex;
     gap: 12px;
     align-items: center;
-    font-size: 0.69rem;
 }
 .status-dot {
     height: 7px;
@@ -297,7 +307,6 @@ time,
 }
 .edition {
     color: var(--muted);
-    font-size: 0.65rem;
 }
 .hero-grid {
     display: grid;
@@ -367,9 +376,6 @@ time,
     align-items: center;
     color: var(--muted);
 }
-.note-heading .mono {
-    font-size: 0.67rem;
-}
 .note-symbol {
     font-family: Georgia, serif;
     line-height: 1;
@@ -402,9 +408,6 @@ time,
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
     color: var(--muted);
-}
-.hero-bottom .mono {
-    font-size: 0.68rem;
 }
 .scroll-link {
     display: inline-flex;
@@ -443,7 +446,6 @@ time,
     transform: translate(2px, -2px);
 }
 .count {
-    font-size: 0.65rem;
     color: var(--muted);
 }
 .lead-project {
@@ -466,7 +468,6 @@ time,
 }
 time {
     color: var(--muted);
-    font-size: 0.68rem;
 }
 .lead-copy h3 {
     margin-top: 42px;
@@ -486,7 +487,6 @@ time {
     margin: 22px 0 0;
     list-style: none;
     color: var(--muted);
-    font-size: 0.64rem;
 }
 .tags li {
     border: 1px solid var(--line);
@@ -499,47 +499,78 @@ time {
     gap: 24px;
 }
 .authority-note {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 38px;
     background: var(--note);
-    border-left: 1px solid var(--line);
+    border-inline-start: 1px solid var(--line);
 }
-.authority-note > .mono {
-    color: var(--muted);
-    font-size: 0.65rem;
+.authority-note h4 {
+    margin: 0;
+    font-family: var(--display);
+    font-size: clamp(1.75rem, 3vw, 2.75rem);
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: -0.035em;
+    overflow-wrap: anywhere;
+}
+.authority-note h4 .serif {
+    color: var(--accent);
+    letter-spacing: inherit;
 }
 .authority-note > p {
-    font-family: var(--display);
-    font-size: clamp(2rem, 3vw, 2.75rem);
-    line-height: 1.17;
-    letter-spacing: -0.05em;
-    margin-block: 38px;
+    margin-block: 16px 22px;
+    color: var(--muted);
 }
-.authority-note > p .serif {
-    color: var(--accent);
+.authority-examples {
+    border-block-end: 1px solid var(--line);
 }
-.authority-flow {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.authority-examples details {
+    border-block-start: 1px solid var(--line);
 }
-.authority-flow li {
+.authority-examples summary {
+    position: relative;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 20px;
-    font-size: 0.8rem;
-    padding: 12px 0;
-    border-top: 1px solid var(--line);
+    justify-content: space-between;
+    gap: 4px 12px;
+    min-height: 48px;
+    padding-block: 8px;
+    padding-inline-end: 1.5rem;
+    list-style: none;
+    cursor: pointer;
 }
-.authority-flow li > span {
+.authority-examples summary::-webkit-details-marker {
+    display: none;
+}
+.authority-examples summary::after {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-end: 4px;
+    width: 7px;
+    height: 7px;
+    border-inline-end: 1.5px solid;
+    border-block-end: 1.5px solid;
+    transform: translateY(-75%) rotate(45deg);
+    content: "";
+}
+.authority-examples details[open] summary::after {
+    transform: translateY(-25%) rotate(225deg);
+}
+.authority-examples summary span {
+    color: var(--muted);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+.authority-examples summary:hover,
+.authority-examples details[open] summary span {
     color: var(--accent);
-    font-family: var(--mono);
-    font-size: 0.65rem;
 }
-.authority-caption {
-    margin-top: 18px;
+.authority-examples summary:focus-visible {
+    outline-offset: 2px;
+}
+.authority-examples details p {
+    padding-block-end: 14px;
+    color: var(--muted);
 }
 .project-row {
     display: grid;
@@ -553,7 +584,6 @@ time {
     padding-top: 4px;
 }
 .project-main .eyebrow {
-    font-size: 0.64rem;
     margin-bottom: 12px;
 }
 .project-main h2,
@@ -565,7 +595,7 @@ time {
 .project-main > p:not(.eyebrow) {
     color: var(--muted);
     font-size: 0.9rem;
-    max-width: 700px;
+    max-inline-size: 54ch;
     margin-top: 13px;
 }
 .project-main .tags {
@@ -619,8 +649,6 @@ time {
     display: flex;
     flex-direction: column;
     gap: 6px;
-    font-family: var(--mono);
-    font-size: 0.65rem;
     color: var(--muted);
     padding-top: 3px;
 }
@@ -645,7 +673,7 @@ time {
 }
 .writing-main > p {
     color: var(--muted);
-    font-size: 0.88rem;
+    max-inline-size: 54ch;
     margin-top: 16px;
 }
 .read-link {
@@ -669,8 +697,9 @@ time {
 }
 .selected-writing .writing-meta {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
+    gap: 6px 20px;
 }
 .selected-writing .read-link {
     display: none;
@@ -804,9 +833,6 @@ time {
     margin-top: 20px;
     color: var(--muted);
 }
-.archive-summary .mono {
-    font-size: 0.65rem;
-}
 .empty-state {
     padding: 70px 24px;
     text-align: center;
@@ -872,7 +898,6 @@ time {
     border-bottom: 1px solid var(--line);
 }
 .timeline-entry .mono {
-    font-size: 0.68rem;
     color: var(--muted);
     padding-top: 4px;
 }
@@ -986,7 +1011,7 @@ time {
 }
 .back-top {
     font-family: var(--mono);
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     color: var(--muted);
     min-height: 44px;
     display: inline-flex;
@@ -1060,24 +1085,21 @@ time {
         width: calc(100% - 40px);
     }
     .nav-shell {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        grid-template-rows: 78px auto;
-        min-height: 0;
-        gap: 0 12px;
+        flex-wrap: wrap;
+        min-height: 78px;
+        padding-block: 17px;
+        gap: 8px 12px;
     }
     .brand {
-        grid-area: 1 / 1;
         font-size: 1.15rem;
     }
     .nav-actions {
-        grid-area: 1 / 2;
         margin-left: auto;
         gap: 10px;
     }
     .primary-nav {
-        grid-area: 2 / 1 / auto / -1;
-        padding-block: 7px 14px;
+        order: 1;
+        flex-basis: 100%;
         justify-content: space-between;
     }
     .primary-nav[data-collapsible="true"] {
@@ -1096,17 +1118,16 @@ time {
         padding-top: 35px;
     }
     .hero-intro .eyebrow {
-        font-size: 0.58rem;
         flex-wrap: wrap;
         gap: 8px;
     }
     .hero-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 40px;
         padding-block: 33px 45px;
     }
     h1 {
-        font-size: clamp(2.8rem, 9.2vw, 4.7rem);
+        font-size: clamp(2rem, 1.5rem + 5.5vw, 4.7rem);
     }
     .hero-description {
         margin-top: 25px;
@@ -1135,7 +1156,7 @@ time {
     }
     .note-symbol {
         margin: 0;
-        font-size: 5rem;
+        font-size: 80px;
         grid-row: 2 / 4;
         align-self: center;
     }
@@ -1153,18 +1174,15 @@ time {
     .hero-bottom {
         padding-block: 18px;
     }
-    .hero-bottom .mono {
-        font-size: 0.58rem;
-    }
     .scroll-link {
         gap: 12px;
     }
     .section-heading {
-        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 8px 24px;
         margin-bottom: 28px;
     }
     .section-heading > .text-link {
-        margin-top: 35px;
         font-size: 0.75rem;
         flex-shrink: 0;
     }
@@ -1180,23 +1198,8 @@ time {
         font-size: 2.6rem;
     }
     .authority-note {
-        border-left: 0;
-        border-top: 1px solid var(--line);
-    }
-    .authority-note > p {
-        margin-block: 24px;
-    }
-    .authority-flow {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px 18px;
-    }
-    .authority-flow li {
-        font-size: 0.7rem;
-        gap: 10px;
-    }
-    .authority-caption {
-        display: none;
+        border-inline-start: 0;
+        border-block-start: 1px solid var(--line);
     }
     .project-row {
         grid-template-columns: 22px minmax(0, 1fr);
@@ -1253,7 +1256,7 @@ time {
         margin-block: 20px;
     }
     .page-title-row h1 {
-        font-size: clamp(3.25rem, 12vw, 5.5rem);
+        font-size: clamp(2rem, 1.5rem + 9vw, 5.5rem);
     }
     .page-annotation {
         text-align: left;
@@ -1280,7 +1283,7 @@ time {
         margin-top: 16px;
     }
     .writing-row {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 13px;
         padding-block: 26px;
     }
@@ -1354,9 +1357,6 @@ time {
     }
 }
 @media (max-width: 380px) {
-    .hero-intro .eyebrow {
-        font-size: 0.53rem;
-    }
     .hero-bottom > .mono:first-child {
         max-width: 150px;
     }
@@ -1373,10 +1373,8 @@ time {
     }
     .section-heading {
         flex-direction: column;
+        align-items: flex-start;
         gap: 10px;
-    }
-    .section-heading > .text-link {
-        margin-top: 0;
     }
     .nav-actions {
         gap: 6px;

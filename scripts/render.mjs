@@ -57,7 +57,7 @@ function header(active) {
 function footer() {
   return `<footer class="site-footer" id="contact">
     <div class="container">
-      <div class="contact-heading"><p class="eyebrow">Have something in mind?</p><h2>Let’s make it <span class="serif">work.</span></h2></div>
+      <div class="contact-heading"><h2>Let’s make it <span class="serif">work.</span></h2></div>
       <div class="contact-body"><p>Engineering, documentation, or a genuinely interesting problem.<br>I’d love to hear what you’re working on.</p><div class="contact-actions">${external(profile.socials.find((item) => item.label === "Email").href, "Say hello", "button button-primary")}<button class="copy-email button button-quiet" type="button" hidden>Copy email <span aria-hidden="true">⧉</span></button><span class="copy-status" role="status"></span></div></div>
       <div class="footer-bottom"><a class="footer-name" href="index.html">Solomon Esenyi <span>/ LordGhostX</span></a><div class="social-links">${profile.socials
         .filter((item) => item.label !== "Email")
@@ -100,7 +100,33 @@ function home() {
   const hasGrantlineLead =
     lead?.githubUrl === "https://github.com/LordGhostX/grantline";
   const leadMarkup = hasGrantlineLead
-    ? `    <article class="lead-project"><div class="lead-copy"><div class="lead-meta"><p class="eyebrow">${e(lead.type)}</p><time datetime="${e(lead.sortDate)}">${e(lead.date)}</time></div><h3>${e(lead.title)}</h3><p>${e(lead.description)}</p>${tags(lead.stack)}<div class="lead-links">${projectLinks(lead)}</div></div><div class="authority-note"><span class="mono">The idea, in three steps</span><p>AI proposes.<br><span class="serif">Mandates decide.</span></p><ol class="authority-flow"><li><span>01</span> Agent intent</li><li><span>02</span> Authority check</li><li><span>03</span> Vault execution</li></ol><span class="mono authority-caption">Intent ≠ permission</span></div></article>\n`
+    ? `    <article class="lead-project">
+      <div class="lead-copy">
+        <div class="lead-meta"><p class="eyebrow">${e(lead.type)}</p><time datetime="${e(lead.sortDate)}">${e(lead.date)}</time></div>
+        <h3>${e(lead.title)}</h3>
+        <p>${e(lead.description)}</p>
+        ${tags(lead.stack)}
+        <div class="lead-links">${projectLinks(lead)}</div>
+      </div>
+      <section class="authority-note" aria-labelledby="authority-heading">
+        <h4 id="authority-heading">AI proposes.<br><span class="serif">Mandates decide.</span></h4>
+        <p>An example Mandate caps each transfer at 10 tokens and requires controller approval above 7.</p>
+        <div class="authority-examples">
+          <details name="grantline-transfer" open>
+            <summary>3-token transfer <span>Allow</span></summary>
+            <p>The proposal fits the Mandate and can proceed to Vault execution.</p>
+          </details>
+          <details name="grantline-transfer">
+            <summary>8-token transfer <span>Escalate</span></summary>
+            <p>A controller must approve this proposal. Grantline checks it again before execution.</p>
+          </details>
+          <details name="grantline-transfer">
+            <summary>12-token transfer <span>Deny</span></summary>
+            <p>The proposal exceeds the 10-token cap. No funds move.</p>
+          </details>
+        </div>
+      </section>
+    </article>\n`
     : "";
   return `<section class="hero container" aria-labelledby="hero-title">
     <div class="hero-intro"><p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Solomon Esenyi <span class="slash">/</span> Engineer, writer, explorer</p><span class="edition mono">The personal portfolio of LordGhostX</span></div>
@@ -111,7 +137,7 @@ function home() {
     <div class="hero-bottom"><span class="mono">Code with purpose. Words with clarity.</span><a href="#selected-work" class="scroll-link mono">Selected work <span aria-hidden="true">↓</span></a></div>
   </section>
   <section class="work-section section container" id="selected-work" aria-labelledby="work-heading">
-    <div class="section-heading"><div><p class="eyebrow">01 / Things I’ve built</p><h2 id="work-heading">Selected <span class="serif">work.</span></h2></div><a class="text-link" href="projects.html">All projects <span class="count">${projects.length}</span> ${arrow}</a></div>
+    <div class="section-heading"><div><p class="eyebrow">Things I’ve built</p><h2 id="work-heading">Selected <span class="serif">work.</span></h2></div><a class="text-link" href="projects.html">All projects <span class="count">${projects.length}</span> ${arrow}</a></div>
 ${leadMarkup}    <div class="selected-projects">${picks
       .slice(hasGrantlineLead ? 1 : 0)
       .map((item, index) =>
@@ -121,12 +147,12 @@ ${leadMarkup}    <div class="selected-projects">${picks
         "",
       )}${picks.length ? "" : `<a class="text-link" href="projects.html">Browse the projects archive ${arrow}</a>`}</div>
   </section>
-  <section class="writing-section section" aria-labelledby="writing-heading"><div class="container writing-layout"><div class="writing-intro"><p class="eyebrow">02 / Making it make sense</p><h2 id="writing-heading">Beyond<br> the <span class="serif">code.</span></h2><p>Technical writing is part of the engineering. These are the guides, research, and explanations I leave along the way.</p><a class="text-link" href="writing.html">All writing <span class="count">${writingItems.length}</span> ${arrow}</a></div><div class="selected-writing">${selected(
+  <section class="writing-section section" aria-labelledby="writing-heading"><div class="container writing-layout"><div class="writing-intro"><p class="eyebrow">Making it make sense</p><h2 id="writing-heading">Beyond<br> the <span class="serif">code.</span></h2><p>Technical writing is part of the engineering. These are the guides, research, and explanations I leave along the way.</p><a class="text-link" href="writing.html">All writing <span class="count">${writingItems.length}</span> ${arrow}</a></div><div class="selected-writing">${selected(
     writingItems,
   )
     .map((item, index) => writingRow(item, index))
     .join("")}</div></div></section>
-  <section class="about-section section container" aria-labelledby="about-heading"><div><p class="eyebrow">03 / The person behind the handle</p><h2 id="about-heading">Curiosity is the<br><span class="serif">through line.</span></h2></div><div class="about-copy"><p class="large-copy">My first program was a Windows Batch script. That curiosity became a practice: build something, understand it deeply, then help someone else do the same.</p><p>${e(profile.bio)}</p><div class="about-links"><a class="text-link" href="timeline.html">The story so far ${arrow}</a>${external(resume, "View résumé")}</div></div></section>`;
+  <section class="about-section section container" aria-labelledby="about-heading"><div><p class="eyebrow">The person behind the handle</p><h2 id="about-heading">Curiosity is the<br><span class="serif">through line.</span></h2></div><div class="about-copy"><p class="large-copy">My first program was a Windows Batch script. That curiosity became a practice: build something, understand it deeply, then help someone else do the same.</p><p>${e(profile.bio)}</p><div class="about-links"><a class="text-link" href="timeline.html">The story so far ${arrow}</a>${external(resume, "View résumé")}</div></div></section>`;
 }
 
 function pageIntro(number, eyebrow, title, italic, description, annotation) {
