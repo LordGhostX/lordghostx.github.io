@@ -36,6 +36,32 @@ for (const path of pages) {
       );
       expect(overflow, `${path} at ${width}px must not overflow`).toBe(false);
     }
+    const html = page.locator("html");
+    await html.evaluate((element) => {
+      element.style.fontSize = "200%";
+    });
+    for (const width of [768, 390, 320]) {
+      await page.setViewportSize({ width, height: 900 });
+      const scrollWidth = await html.evaluate((element) => element.scrollWidth);
+      expect(
+        scrollWidth,
+        `${path} at ${width}px with enlarged text`,
+      ).toBeLessThanOrEqual(width);
+    }
+    const menu = page.getByRole("button", { name: /Menu/ });
+    await menu.click();
+    await expect(
+      page.getByRole("navigation", { name: "Main navigation" }),
+    ).toBeVisible();
+    expect(
+      await html.evaluate((element) => element.scrollWidth),
+      `${path} with the menu open and enlarged text`,
+    ).toBeLessThanOrEqual(320);
+    await menu.click();
+    await html.evaluate((element) => {
+      element.style.removeProperty("font-size");
+    });
+
     for (const width of [320, 1440]) {
       await page.setViewportSize({ width, height: 900 });
       for (const theme of ["dark", "light"]) {
